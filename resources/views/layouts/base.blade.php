@@ -79,7 +79,7 @@
 
 								@if(Route::has('login'))
 									@auth
-										@if(Auth::user()->utype == 'ADM')
+										@if(Auth::user()->utype == 'USR')
 											<li class="menu-item menu-item-has-children parent">
 												<a class="link-direction dropdown-toggle px-3"><i><svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" color="black" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
 													<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
