@@ -45,5 +45,42 @@
             </div>
         </div>
     </div>
+
+    <div style="align-items:center;" class="row">
+        <div class="col-md-3">
+            <h3>H A N D   M A D E</h3>
+            <p>Prendas tejidas a mano con hilado en fibra de alpaca teñido con colorantes naturales como la cochinilla, índigo y molle</p>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="/w3images/nature.jpg" target="_blank">
+                <img src="{{ asset('assets/images/colecciones/colecciongrid1.jpg') }}" alt="Nature" style="width:100%">
+                <div class="caption">
+                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="/w3images/fjords.jpg" target="_blank">
+                <img src="{{ asset('assets/images/colecciones/colecciongrid2.jpg') }}" alt="Fjords" style="width:100%">
+                <div class="caption">
+                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="/w3images/fjords.jpg" target="_blank">
+                <img src="{{ asset('assets/images/colecciones/colecciongrid3.jpg') }}" alt="Fjords" style="width:100%">
+                <div class="caption">
+                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 </main>

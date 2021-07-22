@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>	
+	<title>WAW</title>	
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
 	
-	<!-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mdb.min.css') }}"> -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mdb.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -100,10 +100,10 @@
 														<a class="dropdown-item" title="Productos" href="{{route('admin.products')}}">Productos</a>
 													</li>
 													<li class="menu-item">
-														<a class="dropdown-item" title="Manage Home Slider" href="{{route('admin.homeslider')}}">Manage Home Slider</a>
+														<a class="dropdown-item" title="Manage Home Slider" href="{{route('admin.homeslider')}}">Administrar Sliders</a>
 													</li>
 													<li class="menu-item">
-														<a class="dropdown-item" title="Sale Setting" href="{{route('admin.sale')}}">Sale Setting</a>
+														<a class="dropdown-item" title="Sale Setting" href="{{route('admin.sale')}}">Configuracion de Oferta</a>
 													</li>
 													<li class="menu-item">
 															<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -193,10 +193,10 @@
 					</div>
 				</div>
 
-				<div class="nav-section header-sticky">
-					<div class="primary-nav-section">
-						<div class="container">
-							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
+				<div style="padding-left: -15px; padding-right: -15px;" class="nav-section header-sticky">
+					<div style="padding-left: -15px; padding-right: -15px;" class="primary-nav-section">
+						<div style="padding-left: -15px; padding-right: -15px;" class="container">
+							<ul style="padding-left: -15px; padding-right: -15px;" class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
 								<li class="menu-item">
 									<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" width="70" alt="waw"></a>
 								</li>

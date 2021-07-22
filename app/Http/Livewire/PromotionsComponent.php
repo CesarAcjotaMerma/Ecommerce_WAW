@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Sale;
+use App\Models\HomeSlider;
 
 class PromotionsComponent extends Component
 {
@@ -15,6 +16,7 @@ class PromotionsComponent extends Component
         $products = Product::all();
         $sproducts = Product::where('sale_price', '>', 0)->inRandomOrder()->get()->take(8);
         $sale = Sale::find(1);
-        return view('livewire.promotions-component', ['products'=>$products,'categories'=>$categories, 'sproducts'=>$sproducts, 'sale'=>$sale])->layout('layouts.base');
+        $sliders = HomeSlider::where('status',1)->get();
+        return view('livewire.promotions-component', ['products'=>$products,'categories'=>$categories, 'sproducts'=>$sproducts, 'sale'=>$sale,'sliders'=>$sliders])->layout('layouts.base');
     }
 }

@@ -21,20 +21,22 @@
 			<!-- POPUP -->
 
 			<div class="popup">
-				<div class="contentBox">
-					<div class="close"></div>
-					<div class="imgBx">
-						<img src="{{ asset('assets/images/products/digital_25.jpg') }}" alt="">
-					</div>
-					<div class="modelContent">
-						<div>
-							<h3>Especial Oferta</h3>
-							<h2>80<sup>%</sup><span> Off</span></h2>
-							<p>Lorem ipsum fafads fadsa afdsfrfr gradad</p>
-							<a type="submit" class="btn btn-danger" href="/promotions">Ofertones</a>
+				@foreach($popups as $popup)
+					<div class="contentBox">
+						<div class="close"></div>
+						<div class="imgBx">
+							<img src="{{ asset('assets/images/sliders') }}/{{$popup->image}}" alt="">
+						</div>
+						<div class="modelContent">
+							<div>
+								<h3>{{$popup->title}}</h3>
+								<h2>80<sup>%</sup><span> Off</span></h2>
+								<p>{{$popup->subtitle}}</p>
+								<a type="submit" class="btn btn-danger" href="{{$popup->link}}">VER</a>
+							</div>
 						</div>
 					</div>
-				</div>
+				@endforeach
 			</div>
 
 			<!-- Model automatico -->
