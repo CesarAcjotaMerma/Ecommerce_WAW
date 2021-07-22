@@ -43,7 +43,7 @@ Route::get('/', HomeComponent::class);
 
 Route::get('/shop', ShopComponent::class);
 
-Route::get('/promotions', PromotionsComponent::class);
+Route::get('/promociones', PromotionsComponent::class);
 
 Route::get('/cart', CartComponent::class)->name('product.cart');
 
