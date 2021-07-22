@@ -19,8 +19,24 @@
 			</div>
 
 			<!-- POPUP -->
-
 			<div class="popup">
+					<div class="contentBox">
+						<div class="close"></div>
+						<div class="imgBx">
+							<img src="{{ asset('assets/images/products/1626470161.jpg') }}" alt="">
+						</div>
+						<div class="modelContent">
+							<div>
+								<h3>OFERTAS FIESTAS PATRIAS</h3>
+								<h2>80<sup>%</sup><span> Off</span></h2>
+								<p>Tenemos los ultimos productos en ofertas gratis</p>
+								<a type="submit" class="btn btn-danger" href="/shop">VER</a>
+							</div>
+						</div>
+					</div>
+			</div>
+
+			<!-- <div class="popup">
 				@foreach($popups as $popup)
 					<div class="contentBox">
 						<div class="close"></div>
@@ -37,7 +53,7 @@
 						</div>
 					</div>
 				@endforeach
-			</div>
+			</div> -->
 
 			<!-- Model automatico -->
 
