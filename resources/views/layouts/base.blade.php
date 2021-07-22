@@ -211,7 +211,7 @@
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a class="nav-link  waves-light active show" href="/promociones" class="link-term mercado-item-title">PROMOCIONES</a>
+									<a class="nav-link  waves-light active show" href="/ofertas" class="link-term mercado-item-title">PROMOCIONES</a>
 								</li>
 								<li class="menu-item">
 									<a class="nav-link  waves-light active show" href="/la-alpaca" class="link-term mercado-item-title">ALPACA</a>

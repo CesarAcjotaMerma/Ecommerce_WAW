@@ -11,6 +11,7 @@ use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\CollectionsComponent;
+use App\Http\Livewire\OfertasComponent;
 use App\Http\Livewire\HandMadeComponent;
 use App\Http\Livewire\WawYearComponent;
 use App\Http\Livewire\EcoComponent;
@@ -44,6 +45,8 @@ Route::get('/', HomeComponent::class);
 Route::get('/shop', ShopComponent::class);
 
 Route::get('/promociones', PromotionsComponent::class);
+
+Route::get('/ofertas', OfertasComponent::class);
 
 Route::get('/cart', CartComponent::class)->name('product.cart');
 
