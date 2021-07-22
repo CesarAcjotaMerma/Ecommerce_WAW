@@ -7,7 +7,7 @@
                 </ul>
     </div>
 
-<div class="wrap-main-slide">
+<!-- <div class="wrap-main-slide">
     <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
         @foreach($sliders as $slider)
             <div class="item-slide">
@@ -47,7 +47,7 @@
         @endforeach
     </div>
 </div>
-@endif
+@endif -->
 
 
 <!--Latest Products-->
