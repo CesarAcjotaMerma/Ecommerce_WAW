@@ -17,6 +17,6 @@ class OfertasComponent extends Component
         $sproducts = Product::where('sale_price', '>', 0)->inRandomOrder()->get()->take(8);
         $sale = Sale::find(1);
         $sliders = HomeSlider::where('status',1)->get();
-        return view('livewire.ofertas-component', ['products'=>$products,'categories'=>$categories, 'sproducts'=>$sproducts, 'sale'=>$sale,'sliders'=>$sliders])->layout('layouts.base');
+        return view('livewire.ofertas-component')->layout('layouts.base');
     }
 }
