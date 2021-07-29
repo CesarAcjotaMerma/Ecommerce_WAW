@@ -27,6 +27,9 @@ class AdminEditProductComponent extends Component
     public $newimage;
     public $product_id;
 
+    public $images;
+    public $newimages;
+
     public function mount($product_slug)
     {
         $product = Product::where('slug',$product_slug)->first();
@@ -42,6 +45,7 @@ class AdminEditProductComponent extends Component
         $this->featured = $product->featured;
         $this->quantity = $product->quantity;
         $this->image = $product->image;
+        $this->images = explode(",",$product->images);
         $this->category_id = $product->category_id;
         $this->product_id = $product->id;
     }
@@ -66,10 +70,37 @@ class AdminEditProductComponent extends Component
         $product->quantity = $this->quantity;
         if ($this->newimage)
         {
+            unlink('assets/images/products'.'/'.$product->image);
             $imageName = Carbon::now()->timestamp.'.'.$this->newimage->extension();
             $this->newimage->storeAs('products', $imageName);
             $product->image = $imageName;
         }
+
+        if($this->newimages)
+        {
+            if($product->images)
+            {
+                $images = explode(",",$product->images);
+                foreach($images as $image)
+                {
+                    if($image)
+                    {
+                        unlink('assets/images/products'.'/'.$image);
+                    }
+                }
+            }
+
+            $imagesname = '';
+            foreach($this->newimages as $key=>$image)
+            {
+                $imgName = Carbon::now()->timestamp . $key . '.' . $image->extension();
+                $image->storeAs('products',$imgName);
+                $imagesname = $imagesname . ',' . $imgName;
+
+            }
+            $product->images = $imagesname;
+        }
+
         $product->category_id = $this->category_id;
         $product->save();
         session()->flash('message', 'El producto se ha actualizado satisfactoriamente!');

@@ -8,22 +8,6 @@
             text-decoration: line-through;
             padding-left: 10px;
         }
-        figure{
-            width: 400px;
-            height: 610px;
-            overflow:hidden;
-            position: relative;
-        }
-        figure img{
-            max-width: 100%;
-            min-width: 100%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            z-index: 10;
-            pointer-events: none;
-        }
     </style>
 
     <div class="container">
@@ -43,29 +27,21 @@
                             <ul class="slides">
                                 <li data-thumb="{{ asset('assets/images/products') }}/{{$product->image}}">
                                     <figure id="magnifying_area">
-                                        <img id="magnifying_img" src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}" data-zoom-image="{{ asset('assets/images/products') }}/{{$product->image}}" />
+                                        <img id="magnifying_img" src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}" />
                                     </figure>
                                 </li>
-                                <li data-thumb="{{ asset('assets/images/products') }}/{{$product->image}}">
-                                    <figure id="magnifying_area">
-                                        <img id="magnifying_img" src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}" data-zoom-image="{{ asset('assets/images/products') }}/{{$product->image}}" />
-                                    </figure>
-                                </li>
-                                <li data-thumb="{{ asset('assets/images/products') }}/{{$product->image}}">
-                                    <figure id="magnifying_area">
-                                        <img id="magnifying_img" src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}" data-zoom-image="{{ asset('assets/images/products') }}/{{$product->image}}" />
-                                    </figure>
-                                </li>
-                                <li data-thumb="{{ asset('assets/images/videos/modelaje2.gif') }}">
-                                    <img src="{{ asset('assets/images/videos/modelaje2.gif') }}" alt="{{$product->name}}" data-zoom-image="{{ asset('assets/images/products') }}/{{$product->image}}" />
-                                </li>
-                                <!-- <li data-thumb="{{ asset('assets/images/videos/modelaje.gif') }}">
-                                    <video src="{{ asset('assets/images/videos/modelaje1.mp4') }}" autoplay muted loop alt="{{$product->name}}"></video>
-                                </li> -->
-                                <!-- <li data-thumb="{{ asset('assets/images/videos/modelaje.gif') }}">
-                                    <img src="{{ asset('assets/images/videos/modelaje.gif') }}" alt="{{$product->name}}" data-zoom-image="{{ asset('assets/images/products') }}/{{$product->image}}" />
-                                </li> -->
-                               
+                                @php
+                                    $images = explode(",",$product->images);
+                                @endphp
+                                @foreach($images as $image)
+                                    @if($image)
+                                        <li data-thumb="{{ asset('assets/images/products') }}/{{$image}}">
+                                            <figure >
+                                                <img src="{{ asset('assets/images/products') }}/{{$image}}" alt="{{$product->name}}" />
+                                            </figure>
+                                        </li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -94,13 +70,11 @@
                             <div class="wrap-price"><span class="product-price">S/{{$product->regular_price}}</span></div>
                         @endif
                         <div class="stock-info in-stock">
-                            <p class="availability">Availability: <b>{{$product->stock_status}}</b></p>
-                        </div>
-                        <div class="stock-info in-stock">
-                            <p class="availability">Category: <b>{{$product->category_id}}</b></p>
+                            <p class="availability">Disponibilidad: <b>{{$product->stock_status}}</b></p>
+                            <p class="availability">Cantidad Disponible: <b>{{$product->quantity}}</b></p>
                         </div>
                         <div class="quantity">
-                            <span>Quantity:</span>
+                            <span>Cantidad:</span>
                             <div class="quantity-input">
                                 <input type="text" name="product-quatity" value="1" data-max="120" pattern="[0-9]*" >
                                 
@@ -110,9 +84,9 @@
                         </div>
                         <div class="wrap-butons">
                             @if($product->sale_price > 0 && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">Add to Cart</a>
+                                <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">Agregar al Carrito</a>
                             @else
-                                <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add to Cart</a>
+                                <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Agregar al Carrito</a>
                             @endif
                             <!-- <div class="wrap-btn">
                                 <a href="#" class="btn btn-compare">Add Compare</a>
@@ -124,7 +98,7 @@
                         <div class="tab-control normal">
                             <a href="#description" class="tab-control-item active">descripcion</a>
                             <a href="#add_infomation" class="tab-control-item">Infomacion Adicional</a>
-                            <a href="#review" class="tab-control-item">Reseñas</a>
+                            <!-- <a href="#review" class="tab-control-item">Reseñas</a> -->
                         </div>
                         <div class="tab-contents">
                             <div class="tab-content-item active" id="description">
@@ -145,7 +119,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="tab-content-item " id="review">
+                            <!-- <div class="tab-content-item " id="review">
                                 
                                 <div class="wrap-review-form">
                                     
@@ -172,7 +146,6 @@
                                             </li>
                                         </ol>
                                     </div>
-                                    <!-- #comments -->
 
                                     <div id="review_form_wrapper">
                                         <div id="review_form">
@@ -216,12 +189,12 @@
                                                     </p>
                                                 </form>
 
-                                            </div><!-- .comment-respond-->
-                                        </div><!-- #review_form -->
-                                    </div><!-- #review_form_wrapper -->
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -288,7 +261,6 @@
                                     </div>
                                 </div>
                             </li>
-
                             @endforeach
                         </ul>
                     </div>
@@ -345,11 +317,11 @@
         
         var mWidth = magnifying_area.offsetWidth
         var mHeight = magnifying_area.offsetHeight
-        clientX = clientX / mWidth * 100
-        clientY = clientY / mHeight * 100
+        clientX = clientX / mWidth * 400
+        clientY = clientY / mHeight * 60
 
         //magnifying_img.style.transform = 'translate(-50%,-50%) scale(2)'
-        magnifying_img.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(2)'
+        magnifying_img.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(1.6)'
     })
 
     magnifying_area.addEventListener("mouseleave",function(){

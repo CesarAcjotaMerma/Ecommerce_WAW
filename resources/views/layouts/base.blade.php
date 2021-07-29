@@ -23,6 +23,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
+
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -79,7 +81,7 @@
 
 								@if(Route::has('login'))
 									@auth
-										@if(Auth::user()->utype == 'USR')
+										@if(Auth::user()->utype == 'ADM')
 											<li class="menu-item menu-item-has-children parent">
 												<a class="link-direction dropdown-toggle px-3"><i><svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" color="black" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
 													<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -101,6 +103,9 @@
 													</li>
 													<li class="menu-item">
 														<a class="dropdown-item" title="Manage Home Slider" href="{{route('admin.homeslider')}}">Administrar Sliders</a>
+													</li>
+													<li class="menu-item">
+														<a class="dropdown-item" title="Manage Home Categorias" href="{{route('admin.homecategories')}}">Administrar Categorias en Promociones</a>
 													</li>
 													<li class="menu-item">
 														<a class="dropdown-item" title="Sale Setting" href="{{route('admin.sale')}}">Configuracion de Oferta</a>
@@ -164,12 +169,15 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" width="100" alt="mercado"></a>
+							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" width="200" alt="mercado"></a><br>
+							
+							<!-- <a href="https://alpacamarketplace.pe" target="_blank" class="link-to-home"><img src="{{ asset('assets/images/marca/Logo-Alpaca-MARKETPLACE.png') }}" width="50" alt="mercado"></a> -->
 						</div>
 
 						@livewire('header-search-component')
 
 						<div class="wrap-icon right-section">
+						
 						<!-- <div class="wrap-icon-section minicart">
 							<a href="/cart" class="link-direction">
 								<i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color="black" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
@@ -196,28 +204,28 @@
 				<div style="padding-left: -15px; padding-right: -15px;" class="nav-section header-sticky">
 					<div style="padding-left: -15px; padding-right: -15px;" class="primary-nav-section">
 						<div style="padding-left: -15px; padding-right: -15px;" class="container">
-							<ul style="padding-left: -15px; padding-right: -15px;" class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
+							<ul style="padding-left: -15px; padding-right: -15px;" class="nav primary clone-main-menu" id="mercado_main" data-menuname="Menu Principal" >
 								<li class="menu-item">
 									<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" width="70" alt="waw"></a>
 								</li>
 								<li class="menu-item">
-									<a href="/shop" class="link-term mercado-item-title dropdown-toggle px-3">TIENDA</a>
+									<a href="/shop" class="link-term mercado-item-title dropdown-toggle px-3">Tienda</a>
 									<ul class="submenu-item">
-										<li><a class="dropdown-item" href="/product-category/accesorios"><i class="fas fa-angle-right"></i> ACCESORIOS</a></li>
-										<li><a class="dropdown-item" href="/product-category/mujeres"><i class="fas fa-angle-right"></i> MUJER</a></li>
-										<li><a class="dropdown-item" href="/product-category/hombres"><i class="fas fa-angle-right"></i> HOMBRE</a></li>
-										<li><a class="dropdown-item" href="/product-category/niños"><i class="fas fa-angle-right"></i> NIÑOS</a></li>
-										<li><a class="dropdown-item" href="/product-category/casa"><i class="fas fa-angle-right"></i> CASA</a></li>
+										<li><a class="dropdown-item" href="/product-category/accesorios"><i class="fas fa-angle-right"></i> Accesorios</a></li>
+										<li><a class="dropdown-item" href="/product-category/mujeres"><i class="fas fa-angle-right"></i> Mujer</a></li>
+										<li><a class="dropdown-item" href="/product-category/hombres"><i class="fas fa-angle-right"></i> Hombre</a></li>
+										<li><a class="dropdown-item" href="/product-category/niños"><i class="fas fa-angle-right"></i> Niños</a></li>
+										<li><a class="dropdown-item" href="/product-category/casa"><i class="fas fa-angle-right"></i> Casa</a></li>
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a class="nav-link  waves-light active show" href="/ofertas" class="link-term mercado-item-title">PROMOCIONES</a>
+									<a class="nav-link  waves-light active show" href="/promociones" class="link-term mercado-item-title">Promociones</a>
 								</li>
 								<li class="menu-item">
-									<a class="nav-link  waves-light active show" href="/la-alpaca" class="link-term mercado-item-title">ALPACA</a>
+									<a class="nav-link  waves-light active show" href="/la-alpaca" class="link-term mercado-item-title">Alpaca</a>
 								</li>
 								<li class="menu-item">
-									<a class="link-term mercado-item-title dropdown-toggle px-3">COLECCIONES</a>
+									<a class="link-term mercado-item-title dropdown-toggle px-3">Colecciones</a>
 									<ul class="submenu-item dropright">
 										<li><a class="dropdown-item" href="/collections/handmade"><i class="fas fa-angle-right"></i> HANDMADE</a></li>
 										<li><a class="dropdown-item" href="/collections/waw-2021"><i class="fas fa-angle-right"></i> WAW | 2021</a></li>
@@ -235,17 +243,7 @@
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a href="/cart" data-toggle="tooltip" data-placement="bottom" title="Carrito" class="link-direction">
-										<i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" color="black" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-											<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
-											</svg>
-											@if(Cart::count() > 0)
-												<span style="margin-left:-10px;width: 15px;height: 15px;font-size:8px" class="badge badge-notification bg-danger">{{Cart::count()}}</span>
-											@else
-												<span style="margin-left:-10px;width: 16px;height: 15px;font-size:8px"  class="badge badge-notification bg-danger">0</span>
-											@endif
-										</i>
-									</a>
+									@livewire('cart-count-component')
 								</li>						
 							</ul>
 						</div>
@@ -265,9 +263,9 @@
 				<div class="container">
 					<ul>
 						<li class="fc-info-item">
-							<i class="fa fa-truck" aria-hidden="true"></i>
+							<i class="fa fa-shield" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Free Shipping</h4>
+								<h4 class="fc-name">Prendas de Calidad</h4>
 								<p class="fc-desc">Free On Oder Over $99</p>
 							</div>
 
@@ -283,15 +281,15 @@
 						<li class="fc-info-item">
 							<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Safe Payment</h4>
+								<h4 class="fc-name">Facilidad</h4>
 								<p class="fc-desc">Safe your online payment</p>
 							</div>
 
 						</li>
 						<li class="fc-info-item">
-							<i class="fa fa-life-ring" aria-hidden="true"></i>
+							<i class="fa fa-info-circle" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Soporte</h4>
+								<h4 class="fc-name">Soporte Personalido</h4>
 								<p class="fc-desc">We Have Support 24/7</p>
 							</div>
 						</li>
@@ -306,23 +304,23 @@
 
 					<div class="row">
 
-						<div class="col-md-3">
+						<div class="col-md-5">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Contactanos</h3>
 								<div class="item-content">
 									<div class="wrap-contact-detail">
 										<ul>
-											<li>
+											<li class="menu-item">
 												<i class="fa fa-map-marker" aria-hidden="true"></i>
-												<p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United State USA</p>
+												<p class="contact-txt">Av los Incas - Arequipa</p>
 											</li>
-											<li>
+											<li class="menu-item">
 												<i class="fa fa-phone" aria-hidden="true"></i>
-												<p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+												<p class="contact-txt">(+51) 966 444 888</p>
 											</li>
-											<li>
+											<li class="menu-item">
 												<i class="fa fa-envelope" aria-hidden="true"></i>
-												<p class="contact-txt">Contact@yourcompany.com</p>
+												<p class="contact-txt">Contact@wao.pe</p>
 											</li>											
 										</ul>
 									</div>
@@ -330,21 +328,24 @@
 							</div>
 						</div>
 
-						<div class="col-md-6">
+						<div class="col-md-5">
 
 							<div class="wrap-footer-item">
-								<h3 class="item-header">Terminos y Condiciones</h3>
+								<h3 class="item-header">Terminos Comerciales</h3>
 								<div class="item-content">
-									<div class="wrap-hotline-footer">
-										<span class="desc">Call Us toll Free</span>
-										<b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
+									<div class="wrap-vertical-nav">
+										<ul>
+											<li class="menu-item"><a href="#" class="link-term">Terminos y Condiciones</a></li>
+											<li class="menu-item"><a href="#" class="link-term">Envios</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
-
+<!-- 
 							<div class="wrap-footer-item footer-item-second">
 								<h3 class="item-header">Suscribete para ofertas</h3>
 								<div class="item-content">
+									
 									<div class="wrap-newletter-footer">
 										<form action="#" class="frm-newletter" id="frm-newletter">
 											<input type="email" class="input-email" name="email" value="" placeholder="Enter your email address">
@@ -352,11 +353,11 @@
 										</form>
 									</div>
 								</div>
-							</div>
+							</div> -->
 
 						</div>
 
-						<div class="col-md-3">
+						<div class="col-md-2">
 							<div class="row">
 								<div class="wrap-footer-item">
 									<h3 class="item-header">Servicio al cliente</h3>
@@ -364,10 +365,8 @@
 										<div class="wrap-vertical-nav">
 											<ul>
 												<li class="menu-item"><a href="#" class="link-term">Cambio y devoluciones</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Libro de Reclamaciones</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Gift Certificates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Wish list</a></li>
+												<li class="menu-item"><a href="#" class="link-term">Libro de Reclamaciones Virtual</a></li>
+								
 											</ul>
 										</div>
 									</div>
@@ -376,28 +375,28 @@
 						</div>
 					</div>
 
-					<div class="row">
+					<!-- <div class="row">
 
-						<div class="col-lg-4 col-sm-4 col-md- col-xs-12">
+						<div class="col-lg-4 col-sm-4 col-md- col-xs-6">
 							<div class="wrap-footer-item">
-								<!-- <h3 class="item-header">We Using Safe Payments:</h3>
+								<h3 class="item-header">We Using Safe Payments:</h3>
 								<div class="item-content">
 									<div class="wrap-list-item wrap-gallery">
 										<img src="assets/images/payment.png" style="max-width: 260px;">
 									</div>
-								</div> -->
+								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
+						<div class="col-lg-4 col-sm-4 col-md-6 col-xs-6">
 							<div class="wrap-footer-item">
 								
 							</div>
 						</div>
 
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
 							<div class="wrap-footer-item">
-							<!-- <h3 class="item-header">Social network</h3>
+							<h3 class="item-header">Social network</h3>
 								<div class="item-content">
 									<div class="wrap-list-item social-network">
 										<ul>
@@ -405,13 +404,13 @@
 											<li><a href="#" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 										</ul>
 									</div>
-								</div> -->
+								</div>
 							</div>
 						</div>
 
-					</div>
+					</div> -->
 				</div>
-
+				<br>
 				<!-- <div class="wrap-back-link">
 					<div class="container">
 						<div class="back-link-box">
@@ -461,7 +460,6 @@
 						</div>
 					</div>
 				</div> -->
-
 			</div>
 
 			<!-- Whatsapp plugin de chat Code -->
@@ -498,16 +496,82 @@
 			</script>
 
 
+		<style>
+			.contenedor figure{
+				margin:0;
+				padding:0;
+				max-width:100%;
+				max-height:150px;
+				position: relative;
+				overflow: hidden;
+			}
+			.contenedor figure img{
+				width: 100%;
+				height: 100%;
+				transition: all 500ms ease-out;
+			}
+			.contenedor figure .capa{
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255,255,255,0.4);
+				transition: all 500ms ease-out;
+				text-align:center;
+				vertical-align: middle;
+				justify-content:center;
+			}
+			.contenedor figure:hover > img{
+				transform:scale(1.2);
+			}
+			.contenedor figure .capa h3{
+				color:white;
+				margin-bottom: 10px;
+				transition: all 500ms ease-out;
+				margin-top:35px;
+				text-align:center;
+				vertical-align: middle;
+				justify-content:center;
+				font-size: 18px;
+				color:black;
+				font-weight:bold;
+				vertical-align:middle;
+			}
+			.contenedor figure .capa a img{
+				vertical-align: middle;
+				width:120px;
+				height:50px;
+				text-align:center;
+				vertical-align: middle;
+				justify-content:center;
+				cursor:pointer;
+			}
+
+		</style>
+
+			<div class="row" style="align-items:center;">
+				<div class="col-md-12 contenedor">
+					<figure>
+						<img src="{{ asset('assets/images/prueba/footer.jpg') }}" class="img-fluid" height="80" alt="la-alpaca"/>
+						<div class="capa">
+							<h3>CITE Textil Cámelidos || Arequipa</h3>
+							<a href="https://alpacamarketplace.pe" target="_blank" class="link-to-home"><img src="{{ asset('assets/images/marca/Logo-Alpaca-MARKETPLACE.png') }}" width="80" alt="mercado"></a>
+						</div>
+					</figure> 
+				</div>
+			</div>
+
+
 
 			<div class="coppy-right-box">
 				<div class="container">
 					<div class="coppy-right-item item-left">
-						<p class="coppy-right-text">Copyright © 2021. All rights reserved</p>
+						<p class="coppy-right-text">Copyright 2021 © WAW - Todos los Derechos Reservados</p>
 					</div>
 					<div class="coppy-right-item item-right">
 						<div class="wrap-nav horizontal-nav">
 							<ul>
-								<li class="menu-item"><a href="about-us.html" class="link-term">Acerca de</a></li>								
+								<!-- <li class="menu-item"><a href="about-us.html" class="link-term">Acerca de</a></li>								 -->
 								<li class="menu-item"><a href="/contact" class="link-term">Contactanos</a></li>
 								<li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms Comerciales</a></li>
 								<li class="menu-item"><a href="return-policy.html" class="link-term">Servicio al Cliente</a></li>								
@@ -539,6 +603,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	
     @livewireScripts
 
 	@stack('scripts')

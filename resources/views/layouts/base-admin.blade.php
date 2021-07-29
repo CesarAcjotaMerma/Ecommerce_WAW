@@ -21,6 +21,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
 
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @livewireStyles
 </head>
@@ -38,57 +40,119 @@
 	<header id="header" class="header header-style-1">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="topbar-menu-area">
+			<div class="topbar-menu-area">
 					<div class="container">
 						<div class="topbar-menu left-menu">
 							<ul>
 								<li class="menu-item" >
-									<a title="PERU"><img src="{{ asset('assets/images/peru.svg') }}" width="30"></a>
+									<a><img src="{{ asset('assets/images/peru.svg') }}" width="35"></a>
 								</li>
 							</ul>
 						</div>
-						<div class="topbar-menu right-menu">
+						 <div class="topbar-menu right-menu">
 							<ul>
-								<!-- <li><a href="/cart" title="Carrito" class="link-direction">
-									<i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" color="black" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-										<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
-										</svg>
-									</i>
-								</a></li> -->
-
-								<li class="menu-item menu-item-has-children parent">
-									<a class="link-direction dropdown-toggle px-3"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" color="black" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-										<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-										<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-										</svg>
-									</i></a>
+								<!-- <li class="menu-item lang-menu menu-item-has-children parent">
+									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<ul class="submenu lang" >
+										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
+										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
+										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
+										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
+									</ul>
+								</li> -->
+								<!-- <li class="menu-item menu-item-has-children parent" >
+									<a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu curency" >
-                                        <li class="menu-item" >
-                                            <a class="dropdown-item" title="ADMIN">{{Auth::user()->name}}</a>
-                                        </li>
-                                        <li class="menu-item" >
-                                            <a class="dropdown-item" title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a class="dropdown-item" title="Categorias" href="{{route('admin.categories')}}">Categorias</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a class="dropdown-item" title="Productos" href="{{route('admin.products')}}">Productos</a>
-                                        </li>
-										<li class="menu-item">
-											<a class="dropdown-item" title="Manage Home Slider" href="{{route('admin.homeslider')}}">Manage Home Slider</a>
+										<li class="menu-item" >
+											<a title="Pound (GBP)" href="#">Pound (GBP)</a>
 										</li>
-										<li class="menu-item">
-											<a class="dropdown-item" title="Sale Setting" href="{{route('admin.sale')}}">Sale Setting</a>
+										<li class="menu-item" >
+											<a title="Euro (EUR)" href="#">Euro (EUR)</a>
 										</li>
-                                        <li class="menu-item">
-                                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                            </li>
-                                        <form id="logout-form" method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                        </form>
-                                    </ul>
-								</li>
+										<li class="menu-item" >
+											<a title="Dollar (USD)" href="#">Dollar (USD)</a>
+										</li>
+									</ul>
+								</li> -->
+
+								@if(Route::has('login'))
+									@auth
+										@if(Auth::user()->utype == 'USR')
+											<li class="menu-item menu-item-has-children parent">
+												<a class="link-direction dropdown-toggle px-3"><i><svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" color="black" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+													<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+													<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+													</svg></i>
+												</a>
+												<ul class="submenu curency" >
+													<li class="menu-item" >
+														<a class="dropdown-item" title="ADMIN">{{Auth::user()->name}}</a>
+													</li>
+													<li class="menu-item" >
+														<a class="dropdown-item" title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
+													</li>
+													<li class="menu-item">
+														<a class="dropdown-item" title="Categorias" href="{{route('admin.categories')}}">Categorias</a>
+													</li>
+													<li class="menu-item">
+														<a class="dropdown-item" title="Productos" href="{{route('admin.products')}}">Productos</a>
+													</li>
+													<li class="menu-item">
+														<a class="dropdown-item" title="Manage Home Slider" href="{{route('admin.homeslider')}}">Administrar Sliders</a>
+													</li>
+													<li class="menu-item">
+														<a class="dropdown-item" title="Sale Setting" href="{{route('admin.sale')}}">Configuracion de Oferta</a>
+													</li>
+													<li class="menu-item">
+															<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+														</li>
+													<form id="logout-form" method="POST" action="{{ route('logout') }}">
+														@csrf
+													</form>
+												</ul>
+											</li>
+										@else
+											<li class="menu-item menu-item-has-children parent">
+												<a title="Mi Perfil" class="link-direction dropdown-toggle px-3"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" color="black" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+													<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+													<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+													</svg></i>
+												</a>
+												<ul class="submenu curency" >
+													<li class="menu-item" >
+														<a class="dropdown-item" title="USER">{{Auth::user()->name}}</a>
+														<p>{{Auth::user()->email}}</p>
+													</li>
+													<li class="menu-item" >
+														<a class="dropdown-item" title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
+													</li>
+													<li class="menu-item">
+															<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+														</li>
+													<form id="logout-form" method="POST" action="{{ route('logout') }}">
+														@csrf
+													</form>
+												</ul>
+											</li>
+										@endif
+									@else
+										<li class="menu-item menu-item-has-children parent">
+											<a class="link-direction dropdown-toggle px-3"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" color="black" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+												<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+												<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+												</svg>
+											</i></a>
+											<ul class="submenu curency">
+												<li class="menu-item nav-item dropdown" >
+													<a class="dropdown-item" title="Login" href="{{route('login')}}">Login</a>
+												</li>
+												<li class="menu-item nav-item dropdown">
+													<a class="dropdown-item" title="Register" href="{{route('register')}}">Register</a>
+												</li>
+											</ul>
+										</li>
+									@endif
+								@endif
 							</ul>
 						</div> 
 					</div>
@@ -422,6 +486,11 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     @livewireScripts
+
+	@stack('scripts')
 </body>
 </html>

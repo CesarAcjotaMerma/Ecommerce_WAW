@@ -54,10 +54,11 @@
         <div class="summary">
             <div class="order-summary">
                 <h4 class="title-box">Resumen del orden</h4>
-                <p class="summary-info"><span class="title">Subtotal</span><b class="index">S/.{{Cart::subtotal()}}</b></p>
-                <p class="summary-info"><span class="title">IGV</span><b class="index">S/.{{Cart::tax()}}</b></p>
-                <p class="summary-info"><span class="title">Delivery</span><b class="index">Delivery Gratis</b></p>
-                <p class="summary-info total-info "><span class="title">Total</span><b class="index">S/.{{Cart::total()}}</b></p>
+                <p class="summary-info"><span class="title">SubTotal</span><b class="index">S/.{{Cart::subtotal()}}</b></p>
+                <p class="summary-info total-info"><span class="title">Total</span><b class="index">S/.{{Cart::subtotal()}}</b></p>
+                <!-- <p class="summary-info"><span class="title">IGV</span><b class="index">S/.{{Cart::tax()}}</b></p> -->
+                <!-- <p class="summary-info"><span class="title">Delivery</span><b class="index">Delivery Gratis</b></p> -->
+                <!-- <p class="summary-info total-info "><span class="title">Total</span><b class="index">S/.{{Cart::total()}}</b></p> -->
             </div>
             <div class="checkout-info">
                 <!-- <label class="checkbox-field">
@@ -66,7 +67,7 @@
                 <h4>PAGAR</h4>
                 <!-- <div class="btn btn-checkout" id="paypal-button-container"></div> -->
                 @foreach (Cart::content() as $item)
-                <a class="btn btn-checkout" target="_blank" href="https://api.whatsApp.com/send?phone=+51900989543&text=hola!&nbsp;con&nbsp;el&nbsp;encargado&nbsp;de&nbsp;WAW?==&nbsp;DETALLES DE LA COMPRA=>&nbsp; NOMBRE={{$item->model->name}}&nbsp;||&nbsp;CODIGO={{$item->model->SKU}}&nbsp; TOTAL=&nbsp;{{Cart::total()}}">Pagar Con WhatsApp</a>
+                <a class="btn btn-checkout" target="_blank" href="https://api.whatsApp.com/send?phone=+51900989543&text=hola!&nbsp;con&nbsp;el&nbsp;encargado&nbsp;de&nbsp;WAW?==&nbsp;DETALLES DE LA COMPRA=>&nbsp; NOMBRE={{$item->model->name}}&nbsp;||&nbsp;CODIGO={{$item->model->SKU}}&nbsp; TOTAL=&nbsp;{{Cart::subtotal()}}">Pagar Con WhatsApp</a>
                 @endforeach
                 <a class="link-to-shop" href="/shop">Continuar Comprando<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
             </div>

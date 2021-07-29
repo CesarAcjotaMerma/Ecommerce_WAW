@@ -14,8 +14,8 @@
             <div class="item-slide">
                 <img src="{{ asset('assets/images/colecciones/coleccionslider1.jpg') }}" height="20" alt="" class="img-slide">
                 <div class="slide-info slide-1">
-                    <h2 style="font-size:90px;color:white;text-align:center;">H A N D</h2>
-                    <h2 style="font-size:90px;color:white;text-align:center;">M A D E</h2>
+                    <h2 style="font-size:90px;color:black;text-align:center;">H A N D</h2>
+                    <h2 style="font-size:90px;color:black;text-align:center;">M A D E</h2>
                     <!-- <h2 class="f-title">Kid Smart <b>Watches</b></h2>
                     <span class="subtitle">Compra todos tus productos Smart por internet.</span>
                     <p class="sale-info">Only price: <span class="price">$59.99</span></p> -->
@@ -25,7 +25,7 @@
             <div class="item-slide">
                 <img src="{{ asset('assets/images/colecciones/coleccionslider2.jpg') }}" alt="" class="img-slide">
                 <div class="slide-info slide-2">
-                    <h2 style="font-size:90px;color:white;text-align:center;">HAND MADE</h2>
+                    <h2 style="font-size:90px;color:black;text-align:center;">HAND MADE</h2>
                     <!--
                     <span class="f-subtitle">On online payments</span>
                     <p class="discount-code">Use Code: #FA6868</p>
@@ -36,7 +36,7 @@
             <div class="item-slide">
                 <img src="{{ asset('assets/images/colecciones/coleccionslider3.jpg') }}" alt="" class="img-slide">
                 <div class="slide-info slide-3">
-                    <h2 style="font-size:90px;color:white;text-align:center;">HAND MADE</h2>
+                    <h2 style="font-size:90px;color:black;text-align:center;">HAND MADE</h2>
                     <!-- <h2 class="f-title">Great Range of <b>Exclusive Furniture Packages</b></h2>
                     <span class="f-subtitle">Exclusive Furniture Packages to Suit every need.</span>
                     <p class="sale-info">Stating at: <b class="price">$225.00</b></p>

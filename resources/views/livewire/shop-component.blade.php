@@ -18,16 +18,16 @@
 			<div class="wrap-shop-control">
 				<h1 class="shop-title">Tienda</h1>
 				<div class="wrap-right">
-					<div class="sort-item orderby ">
+					<!-- <div class="sort-item orderby ">
 						<select name="orderby" class="use-chosen" wire:model="sorting">
 							<option value="default" selected="selected">Default sorting</option>
 							<option value="date">Sort by newness</option>
 							<option value="price">Sort by price: low to high</option>
 							<option value="price-desc">Sort by price: high to low</option>
 						</select>
-					</div>
+					</div> -->
 
-					<div class="sort-item product-per-page">
+					<!-- <div class="sort-item product-per-page">
 						<select name="post-per-page" class="use-chosen" wire:model="pagesize">
 							<option value="12" selected="selected">12 per page</option>
 							<option value="16">16 per page</option>
@@ -37,12 +37,12 @@
 							<option value="30">30 per page</option>
 							<option value="32">32 per page</option>
 						</select>
-					</div>
+					</div> -->
 
-					<div class="change-display-mode">
+					<!-- <div class="change-display-mode">
 						<a href="#" class="grid-mode display-mode active"><i class="fa fa-th"></i>Grid</a>
 						<a href="list.html" class="list-mode display-mode"><i class="fa fa-th-list"></i>List</a>
-					</div>
+					</div> -->
 
 				</div>
 
@@ -62,7 +62,7 @@
 							<div class="product-info">
 								<a href="#" class="product-name"><span>{{$product->name}}</span></a>
 								<div class="wrap-price"><span class="product-price">${{$product->regular_price}}</span></div>
-								<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add To Cart</a>
+								<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Agregar al Carrito</a>
 							</div>
 						</div>
 					</li>
@@ -148,7 +148,7 @@
 			<!-- Color -->
 
 			<div class="widget mercado-widget filter-widget">
-				<h2 class="widget-title">Size</h2>
+				<!-- <h2 class="widget-title">Size</h2>
 				<div class="widget-content">
 					<ul class="list-style inline-round ">
 						<li class="list-item"><a class="filter-link active" href="#">s</a></li>
@@ -157,74 +157,35 @@
 						<li class="list-item"><a class="filter-link " href="#">xl</a></li>
 					</ul>
 					<div class="widget-banner">
-						<!-- <figure><img src="assets/images/size-banner-widget.jpg" width="270" height="331" alt=""></figure> -->
+						<figure><img src="assets/images/size-banner-widget.jpg" width="270" height="331" alt=""></figure>
 					</div>
-				</div>
-			</div><!-- Size -->
+				</div> -->
+			</div>
+
 
 			<div class="widget mercado-widget widget-product">
-				<h2 class="widget-title">Popular Products</h2>
+				<h2 class="widget-title"> Prendas Populares</h2>
 				<div class="widget-content">
 					<ul class="products">
+						@foreach ($popular_products as $p_product)
+						
 						<li class="product-item">
 							<div class="product product-widget-style">
 								<div class="thumbnnail">
-									<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-										<figure><img src="assets/images/products/digital_1.jpg" alt=""></figure>
+									<a href="{{route('product.details', ['slug'=>$p_product->slug])}}" title="{{$p_product->name}}">
+										<img src="{{ asset('assets/images/products') }}/{{$p_product->image}}" alt="{{$p_product->name}}">
 									</a>
 								</div>
 								<div class="product-info">
-									<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-									<div class="wrap-price"><span class="product-price">$168.00</span></div>
+									<a  href="{{route('product.details', ['slug'=>$p_product->slug])}}" title="{{$p_product->name}}" class="product-name"><span>{{$p_product->name}}</span></a>
+									<div class="wrap-price"><span class="product-price">S/.{{$product->regular_price}}</span></div>
 								</div>
 							</div>
 						</li>
-
-						<li class="product-item">
-							<div class="product product-widget-style">
-								<div class="thumbnnail">
-									<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-										<figure><img src="assets/images/products/digital_17.jpg" alt=""></figure>
-									</a>
-								</div>
-								<div class="product-info">
-									<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-									<div class="wrap-price"><span class="product-price">$168.00</span></div>
-								</div>
-							</div>
-						</li>
-
-						<li class="product-item">
-							<div class="product product-widget-style">
-								<div class="thumbnnail">
-									<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-										<figure><img src="assets/images/products/digital_18.jpg" alt=""></figure>
-									</a>
-								</div>
-								<div class="product-info">
-									<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-									<div class="wrap-price"><span class="product-price">$168.00</span></div>
-								</div>
-							</div>
-						</li>
-
-						<li class="product-item">
-							<div class="product product-widget-style">
-								<div class="thumbnnail">
-									<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-										<figure><img src="assets/images/products/digital_20.jpg" alt=""></figure>
-									</a>
-								</div>
-								<div class="product-info">
-									<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-									<div class="wrap-price"><span class="product-price">$168.00</span></div>
-								</div>
-							</div>
-						</li>
-
+						@endforeach
 					</ul>
 				</div>
-			</div><!-- brand widget-->
+			</div>
 
 		</div><!--end sitebar-->
 
