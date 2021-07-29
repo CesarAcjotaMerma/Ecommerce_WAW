@@ -19,7 +19,7 @@
 			</div>
 
 			<!-- POPUP -->
-			<!-- <div class="popup">
+			<div class="popup">
 					<div class="contentBox">
 						<div class="close"></div>
 						<div class="imgBx">
@@ -34,9 +34,9 @@
 							</div>
 						</div>
 					</div>
-			</div> -->
+			</div>
 
-			<div class="popup">
+			<!-- <div class="popup">
 				@foreach($popups as $popup)
 					<div class="contentBox">
 						<div class="close"></div>
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 				@endforeach
-			</div>
+			</div> -->
 
 			<!-- Model automatico -->
 
