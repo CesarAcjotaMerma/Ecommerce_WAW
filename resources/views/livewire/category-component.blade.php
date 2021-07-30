@@ -164,25 +164,27 @@
             </div> -->
 
             <div class="widget mercado-widget widget-product">
-                <h2 class="widget-title">Productos Populares</h2>
-                <div class="widget-content">
-                    <ul class="products">
-                        <li class="product-item">
-                            <div class="product product-widget-style">
-                                <div class="thumbnnail">
-                                    <a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-                                        <figure><img src="{{asset('assets/images/products/digital_1.jpg') }}" alt=""></figure>
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-                                    <div class="wrap-price"><span class="product-price">$168.00</span></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div><!-- brand widget-->
+				<h2 class="widget-title"> Prendas Populares</h2>
+				<div class="widget-content">
+					<ul class="products">
+						@foreach ($popular_products as $p_product)
+						<li class="product-item">
+							<div class="product product-widget-style">
+								<div class="thumbnnail">
+									<a href="{{route('product.details', ['slug'=>$p_product->slug])}}" title="{{$p_product->name}}">
+										<img src="{{ asset('assets/images/products') }}/{{$p_product->image}}" alt="{{$p_product->name}}">
+									</a>
+								</div>
+								<div class="product-info">
+									<a  href="{{route('product.details', ['slug'=>$p_product->slug])}}" title="{{$p_product->name}}" class="product-name"><span>{{$p_product->name}}</span></a>
+									<div class="wrap-price"><span class="product-price">S/.{{$p_product->regular_price}}</span></div>
+								</div>
+							</div>
+						</li>
+						@endforeach
+					</ul>
+				</div>
+			</div>
 
         </div><!--end sitebar-->
 

@@ -23,7 +23,7 @@ class CategoryComponent extends Component
     public function store($product_id, $product_name, $product_price)
     {
         Cart::add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
-        session()->flash('success_mesasge', 'Item added in Cart');
+        session()->flash('success_mesasge', 'Artículo agregado en el carrito');
         return redirect()->route('product.cart');
     }
     use WithPagination;
@@ -50,7 +50,8 @@ class CategoryComponent extends Component
         }
 
         $categories = Category::all();
+        $popular_products = Product::inRandomOrder()->limit(4)->get();
 
-        return view('livewire.category-component', ['products'=>$products, 'categories'=>$categories, 'category_name'=>$category_name])->layout("layouts.base");
+        return view('livewire.category-component', ['products'=>$products, 'categories'=>$categories, 'category_name'=>$category_name, 'popular_products'=>$popular_products])->layout("layouts.base");
     }
 }

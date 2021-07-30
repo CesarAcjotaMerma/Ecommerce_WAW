@@ -27,13 +27,13 @@ class CartComponent extends Component
     {
         Cart::remove($rowId);
         $this->emitTo('cart-count-component','refreshComponent');
-        session()->flash('success_mesasge', 'Item has been removed');
+        session()->flash('success_mesasge', 'El elemento ha sido eliminado');
     }
     public function destroyAll()
     {
         Cart::destroy();
         $this->emitTo('cart-count-component','refreshComponent');
-        session()->flash('success_mesasge', 'All Items has been removed');
+        session()->flash('success_mesasge', 'Se han eliminado todos los elementos');
     }
 
     public function render()

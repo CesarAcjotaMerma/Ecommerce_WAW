@@ -21,7 +21,7 @@ class ShopComponent extends Component
     public function store($product_id, $product_name, $product_price)
     {
         Cart::add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
-        session()->flash('success_mesasge', 'Item added in Cart');
+        session()->flash('success_mesasge', 'Artículo agregado en el carrito');
         return redirect()->route('product.cart');
     }
     use WithPagination;
