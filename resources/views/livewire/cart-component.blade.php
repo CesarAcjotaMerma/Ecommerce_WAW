@@ -20,30 +20,30 @@
             <h3 class="box-title">Products Name</h3>
             <ul class="products-cart">
                 @foreach (Cart::content() as $item)
-                <li class="pr-cart-item">
-                    <div class="product-image">
-                        <figure><img src="{{ ('assets/images/products') }}/{{$item->model->image}}" alt="{{$item->model->name}}"></figure>
-                    </div>
-                    <div class="product-name">
-                        <a class="link-to-product" href="{{route('product.details', ['slug'=>$item->model->slug])}}">{{$item->model->name}}</a>
-                    </div>
-                    <div class="price-field produtc-price"><p class="price">S./{{$item->model->regular_price}}</p></div>
-                    <div class="quantity">
-                        <div class="quantity-input">
-                            <input type="text" name="product-quatity" value="{{$item->qty}}" data-max="120" pattern="[0-9]*" >									
-                            <a class="btn btn-increase" href="#" wire:click.prevent="increaseQuantity('{{$item->rowId}}')"></a>
-                            <a class="btn btn-reduce" href="#"  wire:click.prevent="decreaseQuantity('{{$item->rowId}}')"></a>
+                    <li class="pr-cart-item">
+                        <div class="product-image">
+                            <figure><img src="{{ ('assets/images/products') }}/{{$item->model->image}}" alt="{{$item->model->name}}"></figure>
                         </div>
-                    </div>
-                    <div class="price-field sub-total"><p class="price">S/.{{$item->subtotal}}</p></div>
-                    <div class="delete">
-                        <!-- eliminar los items del carrito de compras -->
-                        <a href="#" wire:click.prevent="destroy('{{$item->rowId}}')" class="btn btn-delete" title="">
-                            <span>Delete from your cart</span>
-                            <i class="fa fa-times-circle" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </li>
+                        <div class="product-name">
+                            <a class="link-to-product" href="{{route('product.details', ['slug'=>$item->model->slug])}}">{{$item->model->name}}</a>
+                        </div>
+                        <div class="price-field produtc-price"><p class="price">S./{{$item->model->regular_price}}</p></div>
+                        <div class="quantity">
+                            <div class="quantity-input">
+                                <input type="text" name="product-quatity" value="{{$item->qty}}" data-max="120" pattern="[0-9]*" >									
+                                <a class="btn btn-increase" href="#" wire:click.prevent="increaseQuantity('{{$item->rowId}}')"></a>
+                                <a class="btn btn-reduce" href="#"  wire:click.prevent="decreaseQuantity('{{$item->rowId}}')"></a>
+                            </div>
+                        </div>
+                        <div class="price-field sub-total"><p class="price">S/.{{$item->subtotal}}</p></div>
+                        <div class="delete">
+                            <!-- eliminar los items del carrito de compras -->
+                            <a href="#" wire:click.prevent="destroy('{{$item->rowId}}')" class="btn btn-delete" title="">
+                                <span>Delete from your cart</span>
+                                <i class="fa fa-times-circle" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </li>
                 @endforeach										
             </ul>
             @else
@@ -67,7 +67,7 @@
                 <h4>PAGAR</h4>
                 <!-- <div class="btn btn-checkout" id="paypal-button-container"></div> -->
                 @foreach (Cart::content() as $item)
-                <a class="btn btn-checkout" target="_blank" href="https://api.whatsApp.com/send?phone=+51900989543&text=hola!&nbsp;con&nbsp;el&nbsp;encargado&nbsp;de&nbsp;WAW?==&nbsp;DETALLES DE LA COMPRA=>&nbsp; NOMBRE={{$item->model->name}}&nbsp;||&nbsp;CODIGO={{$item->model->SKU}}&nbsp; TOTAL=&nbsp;{{Cart::subtotal()}}">Pagar Con WhatsApp</a>
+                <a class="btn btn-checkout" target="_blank" href="https://api.whatsApp.com/send?phone=+51900989543&text=hola!&nbsp;con&nbsp;el&nbsp;encargado&nbsp;de&nbsp;WAW?==&nbsp;DETALLES DE LA COMPRA=>&nbsp; NOMBRE={{$item->model->name}}&nbsp;||&nbsp;CODIGO={{$item->model->SKU}}&nbsp; TOTAL=&nbsp;{{Cart::subtotal()}}">Finalizar Compra</a>
                 @endforeach
                 <a class="link-to-shop" href="/shop">Continuar Comprando<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
             </div>

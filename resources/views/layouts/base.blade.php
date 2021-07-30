@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>WAW</title>	
+	<title>WAW!</title>	
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
@@ -210,13 +210,7 @@
 								</li>
 								<li class="menu-item">
 									<a href="/shop" class="link-term mercado-item-title dropdown-toggle px-3">Tienda</a>
-									<ul class="submenu-item">
-										<li><a class="dropdown-item" href="/product-category/accesorios"><i class="fas fa-angle-right"></i> Accesorios</a></li>
-										<li><a class="dropdown-item" href="/product-category/mujeres"><i class="fas fa-angle-right"></i> Mujer</a></li>
-										<li><a class="dropdown-item" href="/product-category/hombres"><i class="fas fa-angle-right"></i> Hombre</a></li>
-										<li><a class="dropdown-item" href="/product-category/niños"><i class="fas fa-angle-right"></i> Niños</a></li>
-										<li><a class="dropdown-item" href="/product-category/casa"><i class="fas fa-angle-right"></i> Casa</a></li>
-									</ul>
+									@livewire('menu-options-component')
 								</li>
 								<li class="menu-item">
 									<a class="nav-link  waves-light active show" href="/promociones" class="link-term mercado-item-title">Promociones</a>
@@ -566,7 +560,7 @@
 			<div class="coppy-right-box">
 				<div class="container">
 					<div class="coppy-right-item item-left">
-						<p class="coppy-right-text">Copyright 2021 © WAW - Todos los Derechos Reservados</p>
+						<p class="coppy-right-text">Copyright 2021 © WAW! - Todos los Derechos Reservados</p>
 					</div>
 					<div class="coppy-right-item item-right">
 						<div class="wrap-nav horizontal-nav">
