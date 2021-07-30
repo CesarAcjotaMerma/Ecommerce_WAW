@@ -1352,12 +1352,10 @@ li.menu-item .nav-label.sale-label::before{
     max-height: 600px;
 }
 
-.item-slide img{
-    opacity: 0.5;
-}
-
 .wrap-main-slide .slide-carousel .slide-info{
     position: absolute;
+    background: rgba(255,255,255,0.9);
+    padding: 50px;
 }
 .wrap-main-slide .slide-carousel .slide-info.slide-1{
     top: 30%;

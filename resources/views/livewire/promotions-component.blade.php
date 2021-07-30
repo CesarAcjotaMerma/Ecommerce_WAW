@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    @if($products->count() > 0 && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
+    <!-- @if($products->count() > 0 && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
     <div class="wrap-show-advance-info-box style-1 has-countdown">
         <h3 class="title-box">PROMOCIONES</h3>
         <div class="wrap-countdown mercado-countdown" data-expire="{{Carbon\Carbon::parse($sale->sale_date)->format('Y/m/d h:m:s') }}"></div>
@@ -48,7 +48,7 @@
             @endforeach
         </div>
     </div>
-    @endif
+    @endif -->
 
 
     <!--Product Categories-->
