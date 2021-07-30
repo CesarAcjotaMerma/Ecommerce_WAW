@@ -10,12 +10,16 @@
     </div>
 
     <style>
+        .mySlides {
+            display:none
+        }
+
         .container1 figure{
             width:100%;
             max-height:400px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0px 10px 15px rgba(0,0,0,0.50);
+            box-shadow: 0px 10px 15px rgba(0,0,0,0.10);
             cursor:pointer;
             margin: 0 0 2em;
             
@@ -32,7 +36,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.2);
             transition: all 500ms ease-out;
             opacity:0;
             visibility:hidden;
@@ -55,10 +59,13 @@
             vertical-align:middle;
         }
         .container1 figure:hover > img{
-            transform:scale(1.2);
+            transform:scale(1.1,1.1);
         }
         .container2 figure:hover > img{
             transform:perspective(17px);
+        }
+        figure:hover > .img-fluid{
+            transform:scale(2.8);
         }
         .container1 figure .capa h3{
             color:white;
@@ -142,30 +149,30 @@
                     <h2 style="font-size:90px;color:white;text-align:center;">DORADA</h2> -->
                     <h2 class="f-title"><b>L a  -  A l p a c a</b></h2>
                     <span class="subtitle">La fibra de la alpaca es ligera, suave, cálida y resistente que se utiliza para la confección de ropa, complementos y alfombras.</span>
-                    <a href="#" class="btn-link">Ver Modelos</a>
+                    <a href="/shop" class="btn-link">Ver Modelos</a>
                 </div>
             </div>
-            <div class="item-slide">
+            <!-- <div class="item-slide">
                 <img src="{{ asset('assets/images/colecciones/coleccionslider2.jpg') }}" alt="" class="img-slide">
                 <div class="slide-info slide-2">
                     <h2 style="font-size:90px;color:white;text-align:center;">VER</h2>
-                    <!--
+                    
                     <span class="f-subtitle">On online payments</span>
                     <p class="discount-code">Use Code: #FA6868</p>
                     <h4 class="s-title">Get Free</h4>
-                    <p class="s-subtitle">TRansparent Bra Straps</p> -->
+                    <p class="s-subtitle">TRansparent Bra Straps</p>
                 </div>
             </div>
             <div class="item-slide">
                 <img src="{{ asset('assets/images/colecciones/coleccionslider3.jpg') }}" alt="" class="img-slide">
                 <div class="slide-info slide-3">
                     <h2 style="font-size:90px;color:white;text-align:center;">VER</h2>
-                    <!-- <h2 class="f-title">Great Range of <b>Exclusive Furniture Packages</b></h2>
+                    <h2 class="f-title">Great Range of <b>Exclusive Furniture Packages</b></h2>
                     <span class="f-subtitle">Exclusive Furniture Packages to Suit every need.</span>
                     <p class="sale-info">Stating at: <b class="price">$225.00</b></p>
-                    <a href="#" class="btn-link">Shop Now</a> -->
+                    <a href="#" class="btn-link">Shop Now</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -185,9 +192,9 @@
         <div class="col-md-4">
             <h4>La alpaca vive en el techo del mundo en los Andes en altitudes que van desde los 3.500 hasta más de 4.500 metros sobre el nivel del mar. La alpaca se ha adaptado al duro clima de los Andes con su fantástica capa gruesa que proporciona aislamiento contra el calor y el frío.</h4>
         </div>
-        <div class="col-md-8 container2">
+        <div class="col-md-8 container1">
             <figure>
-                    <img src="{{ asset('assets/images/alpaca/caracteristicas.png') }}" class="img-fluid" height="80" alt="la-alpaca"/>
+                    <img src="https://images.unsplash.com/photo-1593476879531-74c03d59dd8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-fluid" height="80" alt="la-alpaca"/>
                     <div class="capa">
                     </div>
             </figure> 
@@ -197,9 +204,9 @@
     <hr/>
 
     <div class="row" style="align-items:center;">
-        <div class="col-md-8 container2">
+        <div class="col-md-8 container1">
             <figure>
-                    <img src="{{ asset('assets/images/alpaca/alpaca2.jpg') }}" class="img-fluid" height="80" alt="la-alpaca"/>
+                    <img src="https://images.pexels.com/photos/5383032/pexels-photo-5383032.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid" height="80" alt="la-alpaca"/>
                     <div class="capa">
                     </div>
             </figure> 
@@ -217,6 +224,33 @@
         </div>
         <div class="col-md-6 container2">
             <img src="{{ asset('assets/images/alpaca/fibra.png') }}" >
+        </div>
+    </div>
+
+    <hr/>
+
+
+    <div class="row" style="align-items:center;background-color:#786034;color:#fff;padding:20px;text-align:center;">
+        <div class="col-md-12">
+            <h2 style="text-align:center;"><b>Tipos de Fibra de Alpaca</b></h2>
+           <div class="col-md-6">
+                <h4>ALPACA SUPER BABY</h4>
+                <img src="https://images.pexels.com/photos/1420710/pexels-photo-1420710.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+           </div>
+           <div class="col-md-6">
+                <h4>BABY ALPACA</h4>
+                <img src="https://images.pexels.com/photos/317333/pexels-photo-317333.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+           </div>
+           <div class="col-md-6">
+                <h4>ALPACA FLEECE</h4>
+                <label>
+                    <img src="https://images.pexels.com/photos/317333/pexels-photo-317333.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+           </div>
+           <div class="col-md-6">
+                <h4>GUARIZO</h4>
+                <label>
+                    <img src="https://images.pexels.com/photos/1420710/pexels-photo-1420710.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+           </div>
         </div>
     </div>
 

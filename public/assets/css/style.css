@@ -1082,6 +1082,15 @@ li.menu-item .nav-label.sale-label::before{
     font-weight: 700;
 	text-transform: uppercase;
 }
+
+.primary>.menu-item:not(.home-icon)>a:hover{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+	color: #ff0000;
+    font-weight: 700;
+	text-transform: uppercase;
+}
+
 /* .primary>.menu-item:not(first-child){
 	border-right: 1.5px solid #a2a2a2;
 } */
@@ -1383,7 +1392,7 @@ li.menu-item .nav-label.sale-label::before{
     -webkit-transform: translate(7px, 4px);
 }
 .wrap-main-slide .slide-1 .f-title{
-    font-size: 35px;
+    font-size: 10px;
     line-height: 28.8px;
     color: #000000;
     text-transform: uppercase;
