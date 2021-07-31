@@ -8,6 +8,65 @@
             text-decoration: line-through;
             padding-left: 10px;
         }
+        .show{
+            width: 400px;
+            height: 400px;
+            z-index:1000;
+        }
+
+        .small-img{
+            width: 350px;
+            height: 70px;
+            margin-top: 10px;
+            position: relative;
+            left: 25px;
+        }
+
+        .small-img .icon-left, .small-img .icon-right{
+            width: 10px;
+            height: 14px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+        }
+        .small-img .icon-left{
+            transform: rotate(180deg)
+        }
+        .small-img .icon-right{
+            right: 0;
+        }
+
+        .small-img .icon-left:hover,
+        .small-img .icon-right:hover{
+            opacity: .5;
+        }
+
+        .small-container{
+            width: 310px;
+            height: 70px;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .small-container div{
+            width: 800%;
+            position: relative;
+        }
+
+        .small-container .show-small-img{
+            width: 70px;
+            height: 70px;
+            margin-right: 30px;
+            cursor: pointer;
+            float:left;
+        }
+        .small-container .show-small-img:last-of-type{
+            margin-right: 15px;
+        }
     </style>
 
     <div class="container">
@@ -18,42 +77,40 @@
                 <li class="item-link"><span>Detalles</span></li>
             </ul>
         </div>
+        
         <div class="row">
-
             <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
                 <div class="wrap-product-detail">
                     <div class="detail-media">
-                        <div class="product-gallery">
-                            <ul class="slides">
-                                <li data-thumb="{{ asset('assets/images/products') }}/{{$product->image}}">
-                                    <figure id="magnifying_area">
-                                        <img id="magnifying_img" src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}" />
-                                    </figure>
-                                </li>
-                                @php
-                                    $images = explode(",",$product->images);
-                                @endphp
-                                @foreach($images as $image)
-                                    @if($image)
-                                        <li data-thumb="{{ asset('assets/images/products') }}/{{$image}}">
-                                            <figure >
-                                                <img src="{{ asset('assets/images/products') }}/{{$image}}" alt="{{$product->name}}" />
-                                            </figure>
-                                        </li>
-                                    @endif
-                                @endforeach
-                            </ul>
+                        <div class="show" href="{{ asset('assets/images/products') }}/{{$product->image}}">
+                            <img src="{{ asset('assets/images/products') }}/{{$product->image}}" id="show-img" alt="">
+                        </div>
+                        <!-- <li data-thumb="{{ asset('assets/images/products') }}/{{$product->image}}">
+                            <figure  class="show">
+                                <img id="show-img" src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}" />
+                            </figure>
+                        </li> -->
+                        @php
+                            $images = explode(",",$product->images);
+                        @endphp
+                    
+                        <div class="small-img">
+                            <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-left" alt="" id="prev-img">
+                            <div class="small-container">
+                            @foreach($images as $image)
+                                @if($image)
+                                <div id="small-img-roll">
+                                    <img class="show-small-img" src="{{ asset('assets/images/products') }}/{{$image}}" alt="{{$product->name}}"/>
+                                </div>
+                                @endif
+                            @endforeach
+                            </div>
+                            <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-right" alt="" id="next-img">
                         </div>
                     </div>
+
+
                     <div class="detail-info">
-                        <div class="product-rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <a href="#" class="count-review">(05 review)</a>
-                        </div>
                         <h2 class="product-name">{{$product->name}}</h2>
                         <div class="short-desc">
                             {{$product->short_description}}
@@ -311,6 +368,9 @@
     var magnifying_area =  document.getElementById("magnifying_area");
     var magnifying_img =  document.getElementById("magnifying_img");
 
+    var magnifying_area2 =  document.getElementById("magnifying_area2");
+    var magnifying_img2 =  document.getElementById("magnifying_img2");
+
     magnifying_area.addEventListener("mousemove",function(event){
         clientX = event.clientX - magnifying_area.offsetLeft
         clientY = event.clientY - magnifying_area.offsetTop
@@ -324,7 +384,24 @@
         magnifying_img.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(1.6)'
     })
 
+    magnifying_area2.addEventListener("mousemove",function(event){
+        clientX = event.clientX - magnifying_area2.offsetLeft
+        clientY = event.clientY - magnifying_area2.offsetTop
+        
+        var mWidth = magnifying_area2.offsetWidth
+        var mHeight = magnifying_area2.offsetHeight
+        clientX = clientX / mWidth * 400
+        clientY = clientY / mHeight * 60
+
+        //magnifying_img.style.transform = 'translate(-50%,-50%) scale(2)'
+        magnifying_img2.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(1.6)'
+    })
+
     magnifying_area.addEventListener("mouseleave",function(){
         magnifying_img.style.transform = 'translate(-50%,-50%) scale(1)'
+    })
+
+    magnifying_area2.addEventListener("mouseleave",function(){
+        magnifying_img2.style.transform = 'translate(-50%,-50%) scale(1)'
     })
 </script>

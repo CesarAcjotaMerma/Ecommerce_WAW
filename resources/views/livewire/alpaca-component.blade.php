@@ -143,7 +143,7 @@
     <div class="wrap-main-slide">
         <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
             <div class="item-slide">
-                <img src="{{ asset('assets/images/colecciones/coleccionslider1.jpg') }}" height="20" alt="" class="img-slide">
+                <img src="https://images.unsplash.com/photo-1604880640576-b49a438c4946?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" height="20" alt="" class="img-slide">
                 <div class="slide-info slide-1">
                     <!-- <h2 style="font-size:90px;color:white;text-align:center;"></h2>
                     <h2 style="font-size:90px;color:white;text-align:center;">DORADA</h2> -->
@@ -223,7 +223,7 @@
             <h4>Para aprovechar al máximo su lana, las alpacas deben someterse a un proceso de esquila, donde se les corta y separa todo el pelo. Es un proceso anual que se lleva a cabo entre octubre y noviembre, cuando las temperaturas son un poco más altas y el inicio de la temporada de lluvias produce pasto fresco</h4>
         </div>
         <div class="col-md-6 container2">
-            <img src="{{ asset('assets/images/alpaca/fibra.png') }}" >
+            <img src="https://images.unsplash.com/photo-1540157726314-0c5d60db5a04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" >
         </div>
     </div>
 

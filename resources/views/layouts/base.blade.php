@@ -215,10 +215,10 @@
 									@livewire('menu-options-component')
 								</li>
 								<li class="menu-item">
-									<a class="nav-link  waves-light active show" href="/promociones" class="link-term mercado-item-title">Promociones</a>
+									<a class="nav-link  waves-light active" href="/promociones" class="link-term mercado-item-title">Promociones</a>
 								</li>
 								<li class="menu-item">
-									<a class="nav-link  waves-light active show" href="/la-alpaca" class="link-term mercado-item-title">Alpaca</a>
+									<a class="nav-link  waves-light active" href="/la-alpaca" class="link-term mercado-item-title">Alpaca</a>
 								</li>
 								<li class="menu-item">
 									<a class="link-term mercado-item-title dropdown-toggle px-3">Colecciones</a>
@@ -600,6 +600,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="{{asset('assets/js/zoom-image.js') }}"></script>
+    <script src="{{asset('assets/js/main.js') }}"></script>
 	
     @livewireScripts
 
