@@ -82,8 +82,28 @@
             <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
                 <div class="wrap-product-detail">
                     <div class="detail-media">
+
+                    <!-- <div class="show" href="{{asset('assets/images/prueba/p4.png') }}">
+                        <img src="{{asset('assets/images/prueba/p4.png') }}" id="show-img">
+                    </div>
+
+                    
+                    <div class="small-img">
+                        <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-left" alt="" id="prev-img">
+                        <div class="small-container">
+                        <div id="small-img-roll">
+                            <img src="{{asset('assets/prueba/images/p4.png') }}" class="show-small-img" alt="">
+                            <img src="{{asset('assets/images/prueba/p3.jpg') }}" class="show-small-img" alt="">
+                            <img src="{{asset('assets/images/prueba/p6.jpg') }}" class="show-small-img" alt="">
+                            <img src="{{asset('assets/images/prueba/p5.jpg') }}" class="show-small-img" alt="">
+                            <img src="{{asset('assets/images/prueba/p2.jpg') }}" class="show-small-img" alt="">
+                            <img src="{{asset('assets/images/prueba/p1.jpg') }}" class="show-small-img" alt="">
+                        </div>
+                        </div>
+                        <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-right" alt="" id="next-img">
+                    </div> -->
                         <div class="show" href="{{ asset('assets/images/products') }}/{{$product->image}}">
-                            <img src="{{ asset('assets/images/products') }}/{{$product->image}}" id="show-img" alt="">
+                            <img src="{{ asset('assets/images/products') }}/{{$product->image}}" id="show-img">
                         </div>
                         <!-- <li data-thumb="{{ asset('assets/images/products') }}/{{$product->image}}">
                             <figure  class="show">
@@ -100,7 +120,7 @@
                             @foreach($images as $image)
                                 @if($image)
                                 <div id="small-img-roll">
-                                    <img class="show-small-img" src="{{ asset('assets/images/products') }}/{{$image}}" alt="{{$product->name}}"/>
+                                    <img src="{{ asset('assets/images/products') }}/{{$image}}" class="show-small-img" alt="{{$product->name}}"/>
                                 </div>
                                 @endif
                             @endforeach

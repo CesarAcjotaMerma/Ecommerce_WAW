@@ -11,13 +11,13 @@
          * 默认参数
          */
         var defaultParas = {
-            layerW: 100, // 遮罩宽度
-            layerH: 100, // 遮罩高度
-            layerOpacity: 0.2, // 遮罩透明度
+            layerW: 90, // 遮罩宽度
+            layerH: 90, // 遮罩高度
+            layerOpacity: 0.3, // 遮罩透明度
             layerBgc: '#000', // 遮罩背景颜色
-            showPanelW: 500, // 显示放大区域宽
-            showPanelH: 400, // 显示放大区域高
-            marginL: 25, // 放大区域离缩略图右侧距离
+            showPanelW: 450, // 显示放大区域宽
+            showPanelH: 500, // 显示放大区域高
+            marginL: 0, // 放大区域离缩略图右侧距离
             marginT: 0 // 放大区域离缩略图上侧距离
         };
 

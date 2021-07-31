@@ -51,7 +51,7 @@
 						<div class="topbar-menu left-menu">
 							<ul>
 								<li class="menu-item" >
-									<a><img src="{{ asset('assets/images/peru.svg') }}" width="35"></a>
+									<a><img style="width:35px" src="{{ asset('assets/images/peru.svg') }}"></a>
 								</li>
 							</ul>
 						</div>
@@ -208,7 +208,7 @@
 						<div style="padding-left: -15px; padding-right: -15px;" class="container">
 							<ul style="padding-left: -15px; padding-right: -15px;" class="nav primary clone-main-menu" id="mercado_main" data-menuname="Menu Principal" >
 								<li class="menu-item">
-									<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" width="70" alt="waw"></a>
+									<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" style="width:70px" alt="waw!"></a>
 								</li>
 								<li class="menu-item">
 									<a href="/shop" class="link-term mercado-item-title dropdown-toggle px-3">Tienda</a>
@@ -601,7 +601,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	
-	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="{{asset('assets/js/zoom-image.js') }}"></script>
     <script src="{{asset('assets/js/main.js') }}"></script>
 	

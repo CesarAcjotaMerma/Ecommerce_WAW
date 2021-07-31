@@ -55,9 +55,10 @@ body{
 	overflow-x: hidden;
 }
 img{
-	max-width: 100%;
-    height: auto;
+	width: 100%;
+    height: max-content;
 }
+
 input:focus{
    outline: none;
 }
