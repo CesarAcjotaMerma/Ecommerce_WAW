@@ -45,7 +45,7 @@
 						<div class="topbar-menu left-menu">
 							<ul>
 								<li class="menu-item" >
-									<a><img src="{{ asset('assets/images/peru.svg') }}" width="35"></a>
+									<a><img src="{{ asset('assets/images/peru.svg') }}" style="width:35px"></a>
 								</li>
 							</ul>
 						</div>

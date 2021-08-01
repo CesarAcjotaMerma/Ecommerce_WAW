@@ -16,10 +16,10 @@
                     <strong>Success</strong> {{Session::get('success_mesasge')}}
                 </div>
             @endif
-            @if(Cart::count() > 0)
+            @if(Cart::instance('cart')->count() > 0)
             <h3 class="box-title">Products Name</h3>
             <ul class="products-cart">
-                @foreach (Cart::content() as $item)
+                @foreach (Cart::instance('cart')->content() as $item)
                     <li class="pr-cart-item">
                         <div class="product-image">
                             <figure><img src="{{ ('assets/images/products') }}/{{$item->model->image}}" alt="{{$item->model->name}}"></figure>
@@ -54,11 +54,11 @@
         <div class="summary">
             <div class="order-summary">
                 <h4 class="title-box">Resumen del orden</h4>
-                <p class="summary-info"><span class="title">SubTotal</span><b class="index">S/.{{Cart::subtotal()}}</b></p>
-                <p class="summary-info total-info"><span class="title">Total</span><b class="index">S/.{{Cart::subtotal()}}</b></p>
-                <!-- <p class="summary-info"><span class="title">IGV</span><b class="index">S/.{{Cart::tax()}}</b></p> -->
+                <p class="summary-info"><span class="title">SubTotal</span><b class="index">S/.{{Cart::instance('cart')->subtotal()}}</b></p>
+                <p class="summary-info total-info"><span class="title">Total</span><b class="index">S/.{{Cart::instance('cart')->subtotal()}}</b></p>
+                <!-- <p class="summary-info"><span class="title">IGV</span><b class="index">S/.{{Cart::instance('cart')->tax()}}</b></p> -->
                 <!-- <p class="summary-info"><span class="title">Delivery</span><b class="index">Delivery Gratis</b></p> -->
-                <!-- <p class="summary-info total-info "><span class="title">Total</span><b class="index">S/.{{Cart::total()}}</b></p> -->
+                <!-- <p class="summary-info total-info "><span class="title">Total</span><b class="index">S/.{{Cart::instance('cart')->total()}}</b></p> -->
             </div>
             <div class="checkout-info">
                 <!-- <label class="checkbox-field">
@@ -66,9 +66,11 @@
                 </label> -->
                 <h4>PAGAR</h4>
                 <!-- <div class="btn btn-checkout" id="paypal-button-container"></div> -->
-                @foreach (Cart::content() as $item)
-                <a class="btn btn-checkout" target="_blank" href="https://api.whatsApp.com/send?phone=+51900989543&text=hola!&nbsp;con&nbsp;el&nbsp;encargado&nbsp;de&nbsp;WAW?==&nbsp;DETALLES DE LA COMPRA=>&nbsp; NOMBRE={{$item->model->name}}&nbsp;||&nbsp;CODIGO={{$item->model->SKU}}&nbsp; TOTAL=&nbsp;{{Cart::subtotal()}}">Finalizar Compra</a>
-                @endforeach
+                @if(Cart::instance('cart')->count() > 0)
+                    <a class="btn btn-checkout" target="_blank" href="https://api.whatsApp.com/send?phone=+51900989543&text=hola!&nbsp;con&nbsp;el&nbsp;encargado&nbsp;de&nbsp;WAW?==&nbsp;DETALLES DE LA COMPRA=>@foreach (Cart::instance('cart')->content() as $item)&nbsp; NOMBRE={{$item->model->name}}&nbsp;CODIGO={{$item->model->SKU}}@endforeach&nbsp; TOTAL=&nbsp;{{Cart::instance('cart')->subtotal()}}">Finalizar Compra</a>
+                @else
+                    <a class="btn btn-checkout" href="/shop"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Regresar a la Tienda</a>
+                @endif
                 <a class="link-to-shop" href="/shop">Continuar Comprando<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
             </div>
             <div class="update-clear">
@@ -80,7 +82,7 @@
 
         <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
 
-        <script>
+        <!-- <script>
 
             paypal.Buttons({
 
@@ -88,7 +90,7 @@
                     return actions.order.create({
                         purchase_units: [{
                             amount: {
-                                value: '{{Cart::total()}}'
+                                value: '{{Cart::instance('cart')->total()}}'
                             }
                         }]
                     });
@@ -102,7 +104,7 @@
 
 
             }).render('#paypal-button-container');
-        </script>
+        </script> -->
 
 
 

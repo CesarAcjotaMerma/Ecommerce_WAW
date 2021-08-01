@@ -99,9 +99,9 @@
                                     <div class="col-md-4">
                                         <input type="file" class="input-file" wire:model="newimage"/>
                                         @if($newimage)
-                                            <img src="{{$newimage->temporaryUrl()}}" width="120" />
+                                            <img src="{{$newimage->temporaryUrl()}}" style="width:120px" />
                                         @else
-                                            <img src="{{asset('assets/images/products')}}/{{$image}}" width="120"/>
+                                            <img src="{{asset('assets/images/products')}}/{{$image}}" style="width:120px"/>
                                         @endif
                                     </div>
                                 </div>
@@ -113,13 +113,13 @@
                                         @if($newimages)
                                             @foreach($newimages as $newimage)
                                                 @if($newimage)
-                                                    <img src="{{$newimage->temporaryUrl()}}" width="120"/>
+                                                    <img src="{{$newimage->temporaryUrl()}}" style="width:120px"/>
                                                 @endif
                                             @endforeach
                                         @else
                                             @foreach($images as $image)
                                                 @if($image)
-                                                    <img src="{{asset('assets/images/products')}}/{{$image}}" width="120"/>
+                                                    <img src="{{asset('assets/images/products')}}/{{$image}}" style="width:120px"/>
                                                 @endif
                                             @endforeach
                                         @endif

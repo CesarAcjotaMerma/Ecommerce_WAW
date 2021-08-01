@@ -9,193 +9,29 @@
         </ul>
     </div>
 
-    <style>
-        .mySlides {
-            display:none
-        }
-
-        .container1 figure{
-            width:100%;
-            max-height:400px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0px 10px 15px rgba(0,0,0,0.10);
-            cursor:pointer;
-            margin: 0 0 2em;
-            
-        }
-        .container1 figure img{
-            width: 100%;
-            height: 80%;
-            max-width:100%;
-            max-height:0%;
-            transition: all 500ms ease-out;
-        }
-        .container1 figure .capa{
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,255,255,0.2);
-            transition: all 500ms ease-out;
-            opacity:0;
-            visibility:hidden;
-            text-align:center;
-            vertical-align: middle;
-            justify-content:center;
-        }
-        .container1 figure:hover > .capa{
-            opacity:1;
-            visibility:visible;
-            text-align:center;
-            vertical-align: center;
-            justify-content:center;
-        }
-        .container1 figure:hover > .capa h3{
-            font-size: 50px;
-            color:red;
-            margin-top: 130px;
-            font-weight:bold;
-            vertical-align:middle;
-        }
-        .container1 figure:hover > img{
-            transform:scale(1.1,1.1);
-        }
-        .container2 figure:hover > img{
-            transform:perspective(17px);
-        }
-        figure:hover > .img-fluid{
-            transform:scale(2.8);
-        }
-        .container1 figure .capa h3{
-            color:white;
-            transition: all 500ms ease-out;   
-            text-align:center;
-            vertical-align: middle;
-            justify-content:center;
-        }
-        .container1 figure .capa p{
-            color: black;
-            font-size: 20px;
-            line-height:1.5;
-            width: 100%;
-            vertical-align: middle;
-            text-align:justify;
-            justify-content:center;
-        }
-
-        .container1 figure .capa span{
-            font-weight:bold;
-            background:yellow;
-            padding:3px;
-        }
-        .tablecontainer .table thead{
-            background-color:#786034;
-        }
-        .tablecontainer .table thead th{
-            color:#fff;
-            font-weight:bold;
-            font-size:1.3rem;
-            text-align:center;
-        }
-        .tablecontainer .table tbody{
-            background-color:#E7D1AB;
-            align-items:center;
-        }
-        .tablecontainer .table tbody td{
-            color:#000;
-            font-size:1.1rem;
-            align-items:center;
-            align-content:center;
-            justify-content:center;
-            text-align:center;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                width:100%;
-            }
-            thead {
-                display: none;
-            }
-            tr:nth-of-type(2n) {
-                background-color: inherit;
-            }
-            tr td:first-child {
-                background: #f0f0f0;
-                font-weight:bold;
-                font-size:1.3em;
-            }
-            tbody td {
-                display: block;
-                text-align:center;
-            }
-            tbody td:before {
-                content: attr(data-th);
-                display: block;
-                text-align:center;
-            }
-        }
-
-    </style>
-
     <!--MAIN SLIDE-->
+
     <div class="wrap-main-slide">
         <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
             <div class="item-slide">
                 <img src="https://images.unsplash.com/photo-1604880640576-b49a438c4946?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" height="20" alt="" class="img-slide">
                 <div class="slide-info slide-1">
-                    <!-- <h2 style="font-size:90px;color:white;text-align:center;"></h2>
-                    <h2 style="font-size:90px;color:white;text-align:center;">DORADA</h2> -->
                     <h2 class="f-title"><b>L a  -  A l p a c a</b></h2>
                     <span class="subtitle">La fibra de la alpaca es ligera, suave, cálida y resistente que se utiliza para la confección de ropa, complementos y alfombras.</span>
                     <a href="/shop" class="btn-link">Ver Modelos</a>
                 </div>
             </div>
-            <!-- <div class="item-slide">
-                <img src="{{ asset('assets/images/colecciones/coleccionslider2.jpg') }}" alt="" class="img-slide">
-                <div class="slide-info slide-2">
-                    <h2 style="font-size:90px;color:white;text-align:center;">VER</h2>
-                    
-                    <span class="f-subtitle">On online payments</span>
-                    <p class="discount-code">Use Code: #FA6868</p>
-                    <h4 class="s-title">Get Free</h4>
-                    <p class="s-subtitle">TRansparent Bra Straps</p>
-                </div>
-            </div>
-            <div class="item-slide">
-                <img src="{{ asset('assets/images/colecciones/coleccionslider3.jpg') }}" alt="" class="img-slide">
-                <div class="slide-info slide-3">
-                    <h2 style="font-size:90px;color:white;text-align:center;">VER</h2>
-                    <h2 class="f-title">Great Range of <b>Exclusive Furniture Packages</b></h2>
-                    <span class="f-subtitle">Exclusive Furniture Packages to Suit every need.</span>
-                    <p class="sale-info">Stating at: <b class="price">$225.00</b></p>
-                    <a href="#" class="btn-link">Shop Now</a>
-                </div>
-            </div> -->
         </div>
     </div>
 
-    <!-- <div class="row" style="align-items:center;">
-        <div class="col-md-12 container1">
-            <figure>
-                <img src="{{ asset('assets/images/alpaca/alpaca2.jpg') }}" class="img-fluid" height="80" alt="la-alpaca"/>
-                <div class="capa">
-                    <h3>LA ALPACA</h3>
-                    <p>Las alpacas son versiones domesticadas de las vicuñas,<span>rumiantes sudamericanos que viven en los Andes. La alpaca está relacionada con la llama,</span> que es una versión domesticada de otro rumiante rumano, el guanaco.</p>
-                </div>
-            </figure> 
-        </div>
-    </div> -->
     <hr/>
     <div class="row" style="align-items:center;">
-        <div class="col-md-4">
-            <h4>La alpaca vive en el techo del mundo en los Andes en altitudes que van desde los 3.500 hasta más de 4.500 metros sobre el nivel del mar. La alpaca se ha adaptado al duro clima de los Andes con su fantástica capa gruesa que proporciona aislamiento contra el calor y el frío.</h4>
-        </div>
-        <div class="col-md-8 container1">
+        <div class="col-md-12 container1">
             <figure>
-                    <img src="https://images.unsplash.com/photo-1593476879531-74c03d59dd8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-fluid" height="80" alt="la-alpaca"/>
+                    <img src="https://images.unsplash.com/photo-1593476879531-74c03d59dd8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-fluid" alt="la-alpaca"/>
                     <div class="capa">
+                        <h2 class="f-title"><b>S U  -  H A B I T A D</b></h2>
+                        <h4>La alpaca vive en el techo del mundo en los Andes en altitudes que van desde los 3.500 hasta más de 4.500 metros sobre el nivel del mar. La alpaca se ha adaptado al duro clima de los Andes con su fantástica capa gruesa que proporciona aislamiento contra el calor y el frío.</h4>
                     </div>
             </figure> 
         </div>
@@ -203,7 +39,20 @@
 
     <hr/>
 
-    <div class="row" style="align-items:center;">
+    <div class="wrap-main-slide">
+        <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
+            <div class="item-slide">
+                <img src="https://images.pexels.com/photos/5383032/pexels-photo-5383032.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" height="20" alt="la-alpaca" class="img-slide">
+                <div class="slide-info slide-1">
+                    <h2 class="f-title"><b>I m p o r t a n c i a</b></h2>
+                    <span class="subtitle">Las alpacas son un factor económico importante para los pastores del altiplano andino peruano. Muchas familias se ganan la vida con la cría de alpacas y la extracción y procesamiento de la lujosa y única lana de alpaca.</span>
+                    <!-- <a href="/shop" class="btn-link">Ver Modelos</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row" style="align-items:center;">
         <div class="col-md-8 container1">
             <figure>
                     <img src="https://images.pexels.com/photos/5383032/pexels-photo-5383032.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid" height="80" alt="la-alpaca"/>
@@ -214,7 +63,7 @@
         <div class="col-md-4">
             <h4>Las alpacas son un factor económico importante para los pastores del altiplano andino peruano. Muchas familias se ganan la vida con la cría de alpacas y la extracción y procesamiento de la lujosa y única lana de alpaca.</h4>
         </div>
-    </div>
+    </div> -->
 
     <hr/>
 
@@ -257,7 +106,6 @@
     <div class="row" style="align-items:center;">
         <div class="col-md-8 tablecontainer">
             <div>
-                <label><img src=""></label>
                 <h2 style="font-weight:bold;">Clasificacion por Grupo De Calidades(Requisitos)</h2>
             </div>
             <table class="table table-bordered">

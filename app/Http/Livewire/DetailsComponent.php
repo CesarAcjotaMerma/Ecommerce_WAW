@@ -6,36 +6,34 @@ use App\Models\Product;
 use App\Models\Sale;
 use Livewire\Component;
 use Cart;
-use App\Models\Category;
 
 class DetailsComponent extends Component
 {
     public $slug;
+    public $qty;
 
     public function mount($slug)
     {
         $this->slug = $slug;
+        $this->qty = 1;
     }
     
-    public function increaseQuantity($rowId)
+    public function increaseQuantity()
     {
-        $product = Cart::get($rowId);
-        $qty = $product->qty + 1;
-        Cart::update($rowId, $qty);
-        $this->emitTo('cart-count-component','refreshComponent');
+        $this->qty++;
     }
 
-    public function decreaseQuantity($rowId)
+    public function decreseQuantity()
     {
-        $product = Cart::get($rowId);
-        $qty = $product->qty - 1;
-        Cart::update($rowId, $qty);
-        $this->emitTo('cart-count-component','refreshComponent');
+        if($this->qty > 1)
+        {
+            $this->qty--;
+        }
     }
 
     public function store($product_id, $product_name, $product_price)
     {
-        Cart::add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
+        Cart::instance('cart')->add($product_id,$product_name,$this->qty,$product_price)->associate('App\Models\Product');
         session()->flash('success_mesasge', 'Artículo agregado en el carrito');
         return redirect()->route('product.cart');
     }
@@ -43,7 +41,6 @@ class DetailsComponent extends Component
     public function render()
     {
         $product = Product::where('slug', $this->slug)->first();
-        // $categories = Category::where('category_id',$categories->id)->get();
         $popular_products = Product::inRandomOrder()->limit(4)->get();
         $related_products = Product::where('category_id',$product->category_id)->inRandomOrder()->limit(5)->get();
         $sale = Sale::find(1);

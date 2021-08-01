@@ -48,15 +48,25 @@ Primary use:    Ecommerce
 
 -------------------------------------------------------------------*/
 
+/* COLORES */
+:root {
+    --pcolor : #ff2832;
+}
+
 body{
-	font-family: 'Open Sans', sans-serif;
-	font-size: 13px;
-	color: #444444;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 14px;
+    font-weight: 300;
+	color: #000000;
 	overflow-x: hidden;
 }
 img{
 	width: 100%;
     height: max-content;
+}
+
+.link-to-home img{
+    max-width: 200px;
 }
 
 input:focus{
@@ -1077,20 +1087,34 @@ li.menu-item .nav-label.sale-label::before{
 }
 
 .primary>.menu-item:not(.home-icon)>a{
-    font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-family: 'Helvetica', sans-serif !important;
 	color: #000000;
-    font-weight: 700;
+    font-weight: 600;
 	text-transform: uppercase;
 }
 
 .primary>.menu-item:not(.home-icon)>a:hover{
-    font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
-	color: #ff0000;
-    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Helvetica', sans-serif;
+	color: var(--pcolor);
+    font-weight: 600;
 	text-transform: uppercase;
 }
+.primary>.menu-item:not(.home-icon)>a:hover:before{
+    width: 100%;
+}
+.primary>.menu-item:not(.home-icon)>a:before{
+    content:"";
+    position:absolute;
+    width: 0;
+    height: 0.1rem;
+    background: var(--pcolor);
+    left: 0;
+    bottom:0;
+    transition: all 0.3s ease-in;
+}
+
 
 /* .primary>.menu-item:not(first-child){
 	border-right: 1.5px solid #a2a2a2;
@@ -1227,9 +1251,10 @@ li.menu-item .nav-label.sale-label::before{
 .product .product-thumnail figure{
     display: inline-block;
     overflow: hidden;
-    max-height: 300px;
+    max-height: 320px;
 }
 .product .product-thumnail figure img{
+    min-height: 320px;
     transition: transform ease-out 0.3s 0s;
     -webkit-transition: transform ease-out 0.3s 0s;
     -moz-transition: transform ease-out 0.3s 0s;
@@ -2780,7 +2805,7 @@ li.menu-item .nav-label.sale-label::before{
     height: 35px;
 }
 .wrap-pagination-info .page-numbers li .page-number-item.next-link{
-    min-width: 77px !important;
+    min-width: 30px !important;
 }
 .wrap-pagination-info .page-numbers li .page-number-item:not(.current){
     display: inline-block;
@@ -4815,11 +4840,12 @@ article.single-post blockquote p:last-child::after{
 }
 .wrap-product-detail .detail-info .wrap-butons .add-to-cart{
     display: block;
+    width: 150px;
     background-color: #f5f5f5;
     font-size: 14px;
     line-height: 34px;
     font-weight: 600;
-    color: #666666;
+    color: #000;
     border: 1px solid #e6e6e6;
     border-radius: 0;
     padding: 4.5px 10px;
@@ -7592,4 +7618,171 @@ svg{
 .appWhatsapp img{
     width: 100%;
     height: auto;
+}
+
+/* AGREGAR PRODUCTOS A FAVORITOS */
+
+.product-wish{
+    position:absolute;
+    top:10%;
+    left: 0;
+    z-index:99;
+    right: 40px;
+    text-align:right;
+    padding-top:0;
+}
+
+.product-wish .fa{
+    color: #cbcbcb;
+    font-size: 30px;
+}
+
+.product-wish .fa:hover{
+    color: var(--pcolor);
+}
+.fill-heart{
+    color: var(--pcolor) !important;
+}
+
+/* COMPONENTE ALPACA */
+
+.mySlides {
+    display:none
+}
+
+.container1 figure{
+    width:100%;
+    max-height:500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.10);
+    cursor:pointer;
+    margin: 0 0 2em;
+    
+}
+.container2 figure img{
+    width: 100%;
+    height: 100%;
+    max-width:100%;
+    max-height:0%;
+    transition: all 500ms ease-out;
+}
+.container1 figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0.2) 20%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,255) 50%, rgba(255,255,255,255) 60%, rgba(255,255,255,255) 70%, rgba(255,255,255,255) 80%, rgba(255,255,255,255) 90%, rgba(255,255,255,255) 100%);
+    transition: all 500ms ease-out;
+    text-align:right;
+    vertical-align: center;
+    justify-content:right;
+    vertical-align:middle;
+}
+.container1 figure .capa h2{
+    color:black;
+    font-size: 50px;
+    margin-left: 50%;
+    margin-top: 180px;
+    transition: all 500ms ease-out;   
+    text-align:center;
+    vertical-align: middle;
+    font-weight:bold;
+    justify-content:center;
+}
+.container1 figure .capa h4{
+    color: black;
+    margin-left: 50%;
+    margin-right: 20px;
+    vertical-align: middle;
+    text-align:justify;
+    justify-content:center;
+}
+
+
+.tablecontainer .table thead{
+    background-color:#786034;
+}
+.tablecontainer .table thead th{
+    color:#fff;
+    font-weight:bold;
+    font-size:1.3rem;
+    text-align:center;
+}
+.tablecontainer .table tbody{
+    background-color:#E7D1AB;
+    align-items:center;
+}
+.tablecontainer .table tbody td{
+    color:#000;
+    font-size:1.1rem;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    text-align:center;
+}
+
+@media screen and (max-width: 900px) {
+    .container1 figure .capa h2{
+        color:black;
+        font-size: 3rem;
+        margin-left: 50%;
+        margin-top: 50px;
+        transition: all 500ms ease-out;   
+        text-align:center;
+        vertical-align: middle;
+        justify-content:center;
+    }
+    .container1 figure .capa h4{
+        color: black;
+        margin-left: 50%;
+        margin-right: 20px;
+        vertical-align: middle;
+        text-align:justify;
+        justify-content:center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container1 figure .capa h2{
+        color:black;
+        font-size: 2.1rem;
+        margin-left: 50%;
+        margin-top: 20px;
+        transition: all 500ms ease-out;   
+        text-align:center;
+        vertical-align: middle;
+        justify-content:center;
+    }
+    .container1 figure .capa h4{
+        color: black;
+        margin-left: 50%;
+        margin-right: 20px;
+        vertical-align: middle;
+        text-align:justify;
+        justify-content:center;
+    }
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: #f0f0f0;
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
 }

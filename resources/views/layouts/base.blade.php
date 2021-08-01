@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mdb.min.css') }}">
+	<!-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mdb.min.css') }}"> -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -172,32 +172,19 @@
 
 						<div class="wrap-logo-top left-section">
 							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" width="200" alt="mercado"></a><br>
-							
-							<!-- <a href="https://alpacamarketplace.pe" target="_blank" class="link-to-home"><img src="{{ asset('assets/images/marca/Logo-Alpaca-MARKETPLACE.png') }}" width="50" alt="mercado"></a> -->
 						</div>
 
 						@livewire('header-search-component')
 
 						<div class="wrap-icon right-section">
-						
-						<!-- <div class="wrap-icon-section minicart">
-							<a href="/cart" class="link-direction">
-								<i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color="black" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-									<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
-									</svg>
-								</i>
-								<div class="left-info">
-									<span class="index">4 items</span>
-								</div>
-							</a>
-						</div> -->
-						<div class="wrap-icon-section show-up-after-1024">
-							<a href="#" class="mobile-navigation">
-								<span></span>
-								<span></span>
-								<span></span>
-							</a>
-						</div>
+							@livewire('wishlist-count-component')
+							<div class="wrap-icon-section show-up-after-1024">
+								<a href="#" class="mobile-navigation">
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
+							</div>
 						</div>
 
 					</div>
@@ -208,7 +195,7 @@
 						<div style="padding-left: -15px; padding-right: -15px;" class="container">
 							<ul style="padding-left: -15px; padding-right: -15px;" class="nav primary clone-main-menu" id="mercado_main" data-menuname="Menu Principal" >
 								<li class="menu-item">
-									<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" style="width:70px" alt="waw!"></a>
+									<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logoWAW.jpg') }}" style="max-width:70px" alt="waw!"></a>
 								</li>
 								<li class="menu-item">
 									<a href="/shop" class="link-term mercado-item-title dropdown-toggle px-3">Tienda</a>
@@ -223,19 +210,19 @@
 								<li class="menu-item">
 									<a class="link-term mercado-item-title dropdown-toggle px-3">Colecciones</a>
 									<ul class="submenu-item dropright">
-										<li><a class="dropdown-item" href="/collections/handmade"><i class="fas fa-angle-right"></i> HANDMADE</a></li>
+										<li><a class="dropdown-item" href="/collections/handmade"><i class="fas fa-angle-right"></i> Hand Made</a></li>
 										<li><a class="dropdown-item" href="/collections/waw-2021"><i class="fas fa-angle-right"></i> WAW | 2021</a></li>
-										<li><a class="dropdown-item" href="/collections/eco"><i class="fas fa-angle-right"></i> ECO</a></li>
-										<li><a class="dropdown-item" href="/collections/soft"><i class="fas fa-angle-right"></i> SOTF</a></li>
-										<li><a class="dropdown-item" href="/collections/alpaca-dorada"><i class="fas fa-angle-right"></i> ALPACA DORADA</a></li>
+										<li><a class="dropdown-item" href="/collections/eco"><i class="fas fa-angle-right"></i> Eco</a></li>
+										<li><a class="dropdown-item" href="/collections/soft"><i class="fas fa-angle-right"></i> Soft</a></li>
+										<li><a class="dropdown-item" href="/collections/alpaca-dorada"><i class="fas fa-angle-right"></i> Alpaca Dorada</a></li>
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a href="/detras-de-la-marca" class="link-term mercado-item-title  dropdown-toggle px-3">DETRAS DE LA MARCA</a>
+									<a href="/detras-de-la-marca" class="link-term mercado-item-title  dropdown-toggle px-3">Detras De La Marca</a>
 									<ul class="submenu-item dropright">
-										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> ARTESANOS</a></li>
-										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> FIBRAS RESPONSABLES</a></li>
-										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> VIVIENDO NUESTROS VALORES</a></li>
+										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> Artesanos</a></li>
+										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> Fibras Responsables</a></li>
+										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> Viviendo Nuestros Valores</a></li>
 									</ul>
 								</li>
 								<li class="menu-item">
@@ -497,7 +484,7 @@
 				margin:0;
 				padding:0;
 				max-width:100%;
-				max-height:150px;
+				max-height:120px;
 				position: relative;
 				overflow: hidden;
 			}
@@ -511,7 +498,7 @@
 				top: 0;
 				width: 100%;
 				height: 100%;
-				background: rgba(255,255,255,0.4);
+				background: rgba(255,255,255,0.6);
 				transition: all 500ms ease-out;
 				text-align:center;
 				vertical-align: middle;
@@ -522,9 +509,9 @@
 			}
 			.contenedor figure .capa h3{
 				color:white;
-				margin-bottom: 10px;
+				margin-bottom: 5px;
 				transition: all 500ms ease-out;
-				margin-top:35px;
+				margin-top:30px;
 				text-align:center;
 				vertical-align: middle;
 				justify-content:center;
@@ -535,8 +522,8 @@
 			}
 			.contenedor figure .capa a img{
 				vertical-align: middle;
-				width:120px;
-				height:50px;
+				width:95px;
+				height:40px;
 				text-align:center;
 				vertical-align: middle;
 				justify-content:center;
@@ -584,7 +571,7 @@
 	<script src="{{ asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
 	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
-	<script src="{{ asset('assets/js/chosen.jquery.min.js') }}"></script>
+	<!-- <script src="{{ asset('assets/js/chosen.jquery.min.js') }}"></script> -->
 	<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
 	<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
 	<script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
