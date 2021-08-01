@@ -7746,9 +7746,9 @@ svg{
 @media screen and (max-width: 700px) {
     .container1 figure .capa h2{
         color:black;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-left: 50%;
-        margin-top: 30px;
+        margin-top: 40px;
         transition: all 500ms ease-out;   
         text-align:center;
         vertical-align: middle;
@@ -7758,7 +7758,7 @@ svg{
         color: black;
         margin-left: 50%;
         margin-right: 20px;
-        font-size: medium;
+        font-size: 1.4rem;
         vertical-align: middle;
         text-align:justify;
         justify-content:center;
