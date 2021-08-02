@@ -51,7 +51,7 @@
                                 <div class="col-md-4">
                                     <input type="file" placeholder="Titulo" class="input-file" wire:model="image"/>
                                     @if($image)
-                                        <img src="{{$image->temporaryUrl()}}" width="120" />
+                                        <img src="{{$image->temporaryUrl()}}" style="width:120px;" />
                                     @endif
                                 </div>
                             </div>

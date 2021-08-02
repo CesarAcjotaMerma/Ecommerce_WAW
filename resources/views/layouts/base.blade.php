@@ -95,9 +95,9 @@
 													<li class="menu-item" >
 														<a class="dropdown-item" title="ADMIN">{{Auth::user()->name}}</a>
 													</li>
-													<li class="menu-item" >
+													<!-- <li class="menu-item" >
 														<a class="dropdown-item" title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
-													</li>
+													</li> -->
 													<li class="menu-item">
 														<a class="dropdown-item" title="Categorias" href="{{route('admin.categories')}}">Categorias</a>
 													</li>
@@ -292,19 +292,19 @@
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Contactanos</h3>
 								<div class="item-content">
-									<div class="wrap-contact-detail">
+									<div class="wrap-vertical-nav">
 										<ul>
 											<li class="menu-item">
 												<i class="fa fa-map-marker" aria-hidden="true"></i>
-												<p class="contact-txt">Av los Incas - Arequipa</p>
+												<a class="link-term">Av los Incas - Arequipa</a>
 											</li>
 											<li class="menu-item">
 												<i class="fa fa-phone" aria-hidden="true"></i>
-												<p class="contact-txt">(+51) 966 444 888</p>
+												<a class="link-term">(+51) 966 444 888</a>
 											</li>
 											<li class="menu-item">
 												<i class="fa fa-envelope" aria-hidden="true"></i>
-												<p class="contact-txt">Contact@wao.pe</p>
+												<a class="link-term">Contact@wao.pe</a>
 											</li>											
 										</ul>
 									</div>

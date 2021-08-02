@@ -30,7 +30,7 @@
 								<h3>OFERTAS FIESTAS PATRIAS</h3>
 								<h2>80<sup>%</sup><span> Off</span></h2>
 								<p>Tenemos los ultimos productos en ofertas gratis</p>
-								<a type="submit" class="btn btn-danger" href="/shop">VER</a>
+								<a type="submit" class="btn-link" href="/shop">VER</a>
 							</div>
 						</div>
 					</div>

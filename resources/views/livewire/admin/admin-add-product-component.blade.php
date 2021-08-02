@@ -61,7 +61,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">SKU</label>
+                                    <label class="col-md-4 control-label">Codigo de Producto(SKU)</label>
                                     <div class="col-md-4">
                                         <input type="text" placeholder="SKU" class="form-control input-md" wire:model="SKU"/>
                                     </div>
@@ -71,8 +71,8 @@
                                     <label class="col-md-4 control-label">Stock</label>
                                     <div class="col-md-4">
                                         <select class="form-control" wire:model="stock_status">
-                                            <option value="instock">Instock</option>
-                                            <option value="outofstock">Out of Stock</option>
+                                            <option value="instock">En Stock</option>
+                                            <option value="outofstock">Agotado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                     <div class="col-md-4">
                                         <select class="form-control" wire:model="featured">
                                             <option value="0">No</option>
-                                            <option value="1">Yes</option>
+                                            <option value="1">Si</option>
                                         </select>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                                     <div class="col-md-4">
                                         <input type="file" class="input-file" wire:model="image"/>
                                         @if($image)
-                                            <img src="{{$image->temporaryUrl()}}" width="120" />
+                                            <img src="{{$image->temporaryUrl()}}" style="width:120px;" />
                                         @endif
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@
                                         <input type="file" class="input-file" wire:model="images" multiple/>
                                         @if($images)
                                             @foreach ($images as $image)
-                                                <img src="{{$image->temporaryUrl()}}" width="120" />
+                                                <img src="{{$image->temporaryUrl()}}" style="width:120px;" />
                                             @endforeach
                                         @endif
                                     </div>

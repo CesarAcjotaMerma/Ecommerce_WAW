@@ -68,21 +68,22 @@
     <div class="row" style="align-items:center;background-color:#786034;color:#fff;padding:20px;text-align:center;">
         <div class="col-md-12">
             <h2 style="text-align:center;"><b>Tipos de Fibra de Alpaca</b></h2>
+            <hr/>
            <div class="col-md-3">
                 <h4>Alpaca Super Baby</h4>
-                <img src="https://images.pexels.com/photos/1420710/pexels-photo-1420710.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+                <img src="http://bebecotte.com/img/cms/4.jpg" width="600" class="img-thumbnail">
            </div>
            <div class="col-md-3">
                 <h4>Baby Alpaca</h4>
-                <img src="https://images.pexels.com/photos/317333/pexels-photo-317333.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+                <img src="http://bebecotte.com/img/cms/4.jpg" width="600" class="img-thumbnail">
            </div>
            <div class="col-md-3">
                 <h4>Alpaca Fleece</h4>
-                <img src="https://images.pexels.com/photos/317333/pexels-photo-317333.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+                <img src="http://bebecotte.com/img/cms/4.jpg" width="600" class="img-thumbnail">
            </div>
            <div class="col-md-3">
                 <h4>Guarizo</h4>
-                <img src="https://images.pexels.com/photos/1420710/pexels-photo-1420710.jpeg?auto=compress&cs=tinysrgb&h=450&w=1260" width="600" class="img-thumbnail">
+                <img src="http://bebecotte.com/img/cms/4.jpg" class="img-thumbnail">
            </div>
         </div>
     </div>

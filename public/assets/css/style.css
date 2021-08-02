@@ -275,6 +275,27 @@ button:hover, button:focus, button:visited, button:active{
     line-height: 1em;
 }
 
+.modelContent .btn-link{
+	background-color: #ff2832;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #ff2832;
+    text-decoration: none;
+}
+
+.modelContent .btn-link:hover,
+.modelContent .btn-link:focus{
+    color: #fff;
+	background-color: #000;
+	border-color: #ff2832;
+    text-decoration: none;
+}
+
 .contentBox .modelContent h2 span{
     color:#000;
     font-size: 0.75em;
@@ -1251,10 +1272,10 @@ li.menu-item .nav-label.sale-label::before{
 .product .product-thumnail figure{
     display: inline-block;
     overflow: hidden;
-    max-height: 320px;
+    max-height: 270px;
 }
 .product .product-thumnail figure img{
-    min-height: 320px;
+    min-height: 270px;
     transition: transform ease-out 0.3s 0s;
     -webkit-transition: transform ease-out 0.3s 0s;
     -moz-transition: transform ease-out 0.3s 0s;
@@ -2250,6 +2271,10 @@ li.menu-item .nav-label.sale-label::before{
     position: relative;
     overflow: hidden;
     display: inline-block;
+}
+
+.product-style-2 .product-thumnail a img{
+    max-height: 350px;
 }
 .product-style-2 .product-thumnail .wrap-btn{
     display: inline-block;
