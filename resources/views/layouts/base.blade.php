@@ -220,9 +220,9 @@
 								<li class="menu-item">
 									<a href="/detras-de-la-marca" class="link-term mercado-item-title  dropdown-toggle px-3">Detras De La Marca</a>
 									<ul class="submenu-item dropright">
-										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> Artesanos</a></li>
-										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> Fibras Responsables</a></li>
-										<li><a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> Viviendo Nuestros Valores</a></li>
+										<li><a class="dropdown-item" href="/detras-de-la-marca#artesanos"><i class="fas fa-angle-right"></i> Artesanos</a></li>
+										<li><a class="dropdown-item" href="/detras-de-la-marca#fibras-responsables"><i class="fas fa-angle-right"></i> Fibras Responsables</a></li>
+										<li><a class="dropdown-item" href="/detras-de-la-marca#viviendo-nuestros-valores"><i class="fas fa-angle-right"></i> Viviendo Nuestros Valores</a></li>
 									</ul>
 								</li>
 								<li class="menu-item">

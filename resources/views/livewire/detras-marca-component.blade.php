@@ -6,7 +6,7 @@
                 <li class="item-link"><span>Detras de la Marca</span></li>
             </ul>
         </div>
-        <h2>A R T E S A N O S</h2>
+        <a name="artesanos"><h2>A R T E S A N O S</h2></a>
 
         <hr>
 
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <h2>F I B R A S  -|-  R E S P O N S A B L E S</h2>
+        <a name="fibras-responsables"><h2>F I B R A S  -|-  R E S P O N S A B L E S</h2></a>
         <hr>
 
         <img src="https://www.inia.gob.pe/wp-content/uploads/2019/11/148-2019-2-1200x642.jpg" class="img-fluid" alt="..." />
@@ -95,7 +95,7 @@
             </div>
         </div>
 
-        <h2>V I V I E N D O -|- N U E S T R O S -|- V A L O R E S</h2>
+        <a name="viviendo-nuestros-valores"><h2>V I V I E N D O -|- N U E S T R O S -|- V A L O R E S</h2></a>
         <hr>
         <img src="{{ asset('assets/images/marca/fibras.jpg') }}" width="100%" class="img-fluid" alt="..." />
         <div style="align-items:center;" class="row">
