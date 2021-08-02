@@ -94,9 +94,9 @@
                             <div class="small-container">
                             @foreach($images as $image)
                                 @if($image)
-                                <div id="small-img-roll">
-                                    <img src="{{ asset('assets/images/products') }}/{{$image}}" class="show-small-img" alt="{{$product->name}}"/>
-                                </div>
+                                    <div id="small-img-roll">
+                                        <img src="{{ asset('assets/images/products') }}/{{$image}}" class="show-small-img" alt="{{$product->name}}"/>
+                                    </div>
                                 @endif
                             @endforeach
                             </div>

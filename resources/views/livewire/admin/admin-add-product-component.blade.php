@@ -71,8 +71,8 @@
                                     <label class="col-md-4 control-label">Stock</label>
                                     <div class="col-md-4">
                                         <select class="form-control" wire:model="stock_status">
-                                            <option value="instock">En Stock</option>
-                                            <option value="outofstock">Agotado</option>
+                                            <option value="disponible">Disponible</option>
+                                            <option value="agotado">Agotado</option>
                                         </select>
                                     </div>
                                 </div>

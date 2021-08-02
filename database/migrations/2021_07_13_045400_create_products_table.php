@@ -22,9 +22,10 @@ class CreateProductsTable extends Migration
             $table->decimal('regular_price');
             $table->decimal('sale_price')->nullable();
             $table->string('SKU');
-            $table->enum('stock_status',['instock','outofstock']);
+            $table->enum('stock_status',['disponible','agotado']);
             $table->boolean('featured')->default(false);
             $table->unsignedInteger('quantity')->default(10);
+            $table->enum('size',['x-small', 'small', 'medium', 'large', 'x-large']);
             $table->string('image')->nullable();
             $table->text('images')->nullable();
             $table->bigInteger('category_id')->unsigned()->nullable();

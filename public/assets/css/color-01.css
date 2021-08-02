@@ -51,7 +51,6 @@
 .wrap-main-slide .slide-1 .btn-link,
 .wrap-main-slide .slide-3 .btn-link,
 .product-style-2 .product-thumnail .wrap-btn .function-link:hover,
-.wrap-footer-content .wrap-function-info,
 .wrap-newletter-footer .btn-submit,
 .wrap-footer-item .social-network ul li a:hover,
 .product-style-3 a.add-to-cart:hover,
@@ -74,6 +73,11 @@
 .main-info-area .right-section .wrap-icon-section.minicart .index{
 	background: #ff2832;
 }
+
+.wrap-footer-content .wrap-function-info{
+	background: #000;
+}
+
 .has-child-cate .toggle-control:hover::after,
 .has-child-cate .toggle-control:hover::before,
 .widget.filter-widget .vertical-list li a.btn-control:hover::before,
@@ -101,10 +105,12 @@
 .wrap-pagination-info .page-numbers li .page-number-item.current,
 .wrap-pagination-info .page-numbers li .page-number-item:hover,
 .aboutus-info.style-small-left .list-showups label input[type="radio"]:checked + span.check-box,
-.wrap-articles article .info a.btn-to-post:hover,
-.wrap-footer-content .wrap-function-info .fc-info-item{
+.wrap-articles article .info a.btn-to-post:hover{
 	border-color: #ff3c45 !important;
 }
+.wrap-footer-content .wrap-function-info .fc-info-item{
+	border-color: #fff !important;
+}
 .wrap-footer-content .wrap-function-info .fc-info-item .wrap-left-info .fc-desc{
-	color: #ffc2c4 !important;
+	color: #fff !important;
 }
