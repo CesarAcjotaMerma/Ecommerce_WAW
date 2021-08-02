@@ -8,7 +8,7 @@
                     </ul>
         </div>
 
-    <div class="wrap-main-slide">
+    <!-- <div class="wrap-main-slide">
         <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
             @foreach($sliders as $slider)
                 <div class="item-slide">
@@ -48,11 +48,11 @@
             @endforeach
         </div>
     </div>
-    @endif
+    @endif-->
 
 
     <!--Product Categories-->
-    <div class="wrap-show-advance-info-box style-1">
+    <!-- <div class="wrap-show-advance-info-box style-1">
         <h3 class="title-box">Product Categories</h3>
         <div class="wrap-top-banner">
             <a href="#" class="link-banner banner-effect-2">
@@ -93,12 +93,12 @@
                 </div>
             </div>
         </div>
-    </div>			
+    </div> -->
 
 
     <!--Latest Products-->
 
-    <!-- <div class="wrap-show-advance-info-box style-1">
+    <div class="wrap-show-advance-info-box style-1">
         <h3 class="title-box">ULTIMOS PRODUCTOS</h3>
         <div class="wrap-top-banner">
             <a href="#" class="link-banner banner-effect-2">
@@ -257,7 +257,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     </div>
 </main>
