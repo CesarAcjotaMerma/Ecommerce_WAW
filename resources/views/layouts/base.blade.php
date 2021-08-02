@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="facebook-domain-verification" content="0ewq6p8aw2qo8gqbzwezsrra7e46v2" />
 	<title>WAW!</title>
 	<!-- Icono de la pagina web -->
     <link rel="shortcut icon" width="10" type="image/x-icon" href="{{ asset('assets/images/iconos/favicon.png') }}">
