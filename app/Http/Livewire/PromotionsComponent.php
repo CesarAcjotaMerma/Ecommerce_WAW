@@ -22,6 +22,7 @@ class PromotionsComponent extends Component
         $cats = explode(',',$category->sel_categories);
         $categories = Category::whereIn('id',$cats)->get();
         $no_of_products = $category->no_of_products;
-        return view('livewire.promotions-component', ['products'=>$products,'categories'=>$categories, 'no_of_products'=>$no_of_products, 'sproducts'=>$sproducts, 'sale'=>$sale,'sliders'=>$sliders])->layout('layouts.base');
+        return view('livewire.promotions-component')->layout('layouts.base');
+        // ['products'=>$products,'categories'=>$categories, 'no_of_products'=>$no_of_products, 'sproducts'=>$sproducts, 'sale'=>$sale,'sliders'=>$sliders]
     }
 }
