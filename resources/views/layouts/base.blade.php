@@ -592,6 +592,10 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="{{asset('assets/js/zoom-image.js') }}"></script>
     <script src="{{asset('assets/js/main.js') }}"></script>
+
+	<!-- Model Viewer -->
+	
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	
     @livewireScripts
 

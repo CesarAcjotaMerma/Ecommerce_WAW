@@ -122,7 +122,7 @@
                             <p class="availability">Disponibilidad: <b>{{$product->stock_status}}</b></p>
                             <p class="availability">Cantidad Disponible: <b>{{$product->quantity}}</b></p>
                         </div>
-                        <div class="widget mercado-widget filter-widget">
+                        <!-- <div class="widget mercado-widget filter-widget">
                             <div class="widget-content">
                                 <ul class="list-style inline-round ">
                                     <li class="list-item">Tamaño: <a class="filter-link active" href="#">s</a></li>
@@ -131,7 +131,7 @@
                                     <li class="list-item"><a class="filter-link " href="#">xl</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="quantity">
                             <span>Cantidad:</span>
                             <div class="quantity-input">
