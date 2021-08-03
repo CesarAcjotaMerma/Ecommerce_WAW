@@ -30,7 +30,10 @@
                 @endforeach
             </ul>
             @else
-                <h4>No se han añadido productos a la lista de deseos</h4>
+                <div class="col-md-12 product product-style-3 equal-elem">
+                    <h4>No se han añadido productos a la lista de deseos</h4>
+                    <a style="width:200px !important;" href="/shop" class="btn add-to-cart">Regresar a la Tienda</a>
+                </div>
             @endif
         </div>
     </div>

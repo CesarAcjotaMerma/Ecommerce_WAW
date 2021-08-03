@@ -3,7 +3,11 @@
         <i class="fa fa-heart" aria-hidden="true"></i>
         <div class="left-info">
             @if(Cart::instance('wishlist')->count() > 0)
-                <span class="index">{{Cart::instance('wishlist')->count()}} item</span>
+                @if(Cart::instance('wishlist')->count() == 1)
+                    <span class="index">{{Cart::instance('wishlist')->count()}} articulo</span>
+                @else
+                    <span class="index">{{Cart::instance('wishlist')->count()}} articulos</span>
+                @endif
             @endif
             <span class="title">Deseos</span>
         </div>

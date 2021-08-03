@@ -119,6 +119,5 @@
 			</div><!--end sitebar-->
 
 		</div><!--end row-->
-
 	</div><!--end container-->
 </div>
