@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                Todas las Categorias
+                                Ver Categorias
                             </div>
                             <div class="col-md-6">
                                 <a href="{{route('admin.addcategory')}}" class="btn btn-success pull-right">Agregar</a>

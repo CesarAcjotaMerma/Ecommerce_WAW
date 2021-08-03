@@ -296,7 +296,7 @@
 										<ul>
 											<li class="menu-item">
 												<i class="fa fa-map-marker" aria-hidden="true"></i>
-												<a class="link-term">Av los Incas - Arequipa</a>
+												<a class="link-term">MZA. B LOTE. 28 URB. ASVEA - AREQUIPA / AREQUIPA / AREQUIPA</a>
 											</li>
 											<li class="menu-item">
 												<i class="fa fa-phone" aria-hidden="true"></i>
@@ -594,7 +594,7 @@
     <script src="{{asset('assets/js/main.js') }}"></script>
 
 	<!-- Model Viewer -->
-	
+
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	
     @livewireScripts

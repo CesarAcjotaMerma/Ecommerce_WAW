@@ -9,7 +9,7 @@
                                 Editar Producto
                             </div>
                             <div class="col-md-6">
-                                <a href="{{route('admin.products')}}" class="btn btn-success pull-right">Todos los Productos</a>
+                                <a href="{{route('admin.products')}}" class="btn btn-success pull-right">Ver Productos</a>
                             </div>
                         </div>
                     </div>
