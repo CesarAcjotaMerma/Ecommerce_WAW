@@ -85,8 +85,8 @@
 			<div class="wrap-show-advance-info-box style-1">
 				<div style="text-align:center;color:white; margin:20px 0 20px 0;background-color:#f2f2f2;">
 					<div style="padding:20px;color:black;">
-						<h4 style=" font-weight:bold;" class="title">LAS MAS PRENDAS FINAS</h4>
-						<h5>Detalle en nuestro proceso textil garantiza incomparable suavidad, alta resistencia y gran finura.</h5>
+						<h3 style=" font-weight:bold;" class="title">LAS MÁS PRENDAS FINAS</h3>
+						<h4>Ofrecemos al mundo prendas tejidas en fibras naturales.</h4>
 					</div>
 				</div>
 
@@ -126,36 +126,23 @@
 
 				<div class="bg-image d-flex justify-content-center align-items-center" style="
 					background-image: url('https://incalpacastores.com/images/background-alpacas.jpg');
-					height: 30vh;filter: brightness(40%);color:#f2f2f2;
+					height: 30vh;filter: brightness(60%);color:#f2f2f2;
 					">
-					<div style="margin:20px 0 20px 0;color:#fff" class="row">
-						<div  style="padding:10px;" class="col-sm-9 p-3 ">
-							<!-- <h4 style=" font-weight:bold;">SABEMOS QUE AMAS LA FIBRA DE ALPACA</h4>
-							<h5>SUSCRÍBETE Y RECIBE LAS ÚLTIMAS NOVEDADES Y PROMOCIONES</h5> -->
-							
-						</div>
-						
-						<div  style="padding:10px;" class="col-md-2">
-							<!-- <label>VISITANOS: </label>
-							<h2>Hola genuca</h2> -->
-							<i class="icon-box-item"></i>
-						</div>
-				</div>
 				</div>
 
 
 				<div style="margin:20px 0 20px 0;" class="row">
 					<div style="padding:20px;background-color:#f2f2f2;" class="col-md-4">
-						<h4 style=" font-weight:bold;">PAGO SEGURO</h4>
-						<h5>Revisar Terminos y condiciones</h5>
+						<h3 style=" font-weight:bold;">PAGO SEGURO</h3>
+						<h4>Revisar Terminos y condiciones</h4>
 					</div>
 					<div  style="padding:20px; background-color:#f2f2f2;" class="col-md-4">
-						<h4 style=" font-weight:bold;">PRENDAS DE CALIDAD</h4>
-						<h5>Revisar Terminos y condiciones</h5>
+						<h3 style=" font-weight:bold;">PRENDAS DE CALIDAD</h3>
+						<h4>Revisar Terminos y condiciones</h4>
 					</div>
 					<div  style="padding:20px; background-color:#f2f2f2;" class="col-md-4">
-						<h4 style=" font-weight:bold;">ASESORIA PERSONALIDO</h4>
-						<h5>Revisar Terminos y condiciones</h5>
+						<h3 style=" font-weight:bold;">ASESORIA PERSONALIDO</h3>
+						<h4>Revisar Terminos y condiciones</h4>
 					</div>
 				</div>
 				

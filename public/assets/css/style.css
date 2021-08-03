@@ -7812,3 +7812,55 @@ svg{
         text-align:center;
     }
 }
+
+/* CITE Textil Camelidos Arequipa - Footer */
+
+.contenedor figure{
+    margin:0;
+    padding:0;
+    max-width:100%;
+    max-height:120px;
+    position: relative;
+    overflow: hidden;
+}
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.contenedor figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    transition: all 500ms ease-out;
+    text-align:center;
+    vertical-align: middle;
+    justify-content:center;
+}
+.contenedor figure:hover > img{
+    transform:scale(1.2);
+}
+.contenedor figure .capa h3{
+    color:white;
+    margin-bottom: 5px;
+    transition: all 500ms ease-out;
+    margin-top:30px;
+    text-align:center;
+    vertical-align: middle;
+    justify-content:center;
+    font-size: 18px;
+    color:black;
+    font-weight:bold;
+    vertical-align:middle;
+}
+.contenedor figure .capa a img{
+    vertical-align: middle;
+    width:95px;
+    height:40px;
+    text-align:center;
+    vertical-align: middle;
+    justify-content:center;
+    cursor:pointer;
+}

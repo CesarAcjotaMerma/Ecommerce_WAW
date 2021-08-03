@@ -49,7 +49,7 @@ Route::get('/shop', ShopComponent::class);
 
 Route::get('/promociones', PromotionsComponent::class);
 
-Route::get('/ofertas', OfertasComponent::class);
+// Route::get('/ofertas', OfertasComponent::class);
 
 Route::get('/cart', CartComponent::class)->name('product.cart');
 
@@ -70,11 +70,11 @@ Route::get('/collections/eco', EcoComponent::class);
 Route::get('/collections/soft', SoftComponent::class);
 Route::get('/collections/alpaca-dorada', AlpacaDoradaComponent::class);
 
-Route::get('/contact', ContactComponent::class);
-
 Route::get('/la-alpaca', AlpacaComponent::class);
 
 Route::get('/detras-de-la-marca', DetrasMarcaComponent::class);
+
+Route::get('/contact', ContactComponent::class);
 
 
 

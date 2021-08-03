@@ -24,36 +24,36 @@
         </div>
 
         @if($products->count() > 0 && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-        <div class="wrap-show-advance-info-box style-1 has-countdown">
-            <h3 class="title-box">PROMOCIONES</h3>
-            <div class="wrap-countdown mercado-countdown" data-expire="{{Carbon\Carbon::parse($sale->sale_date)->format('Y/m/d h:m:s') }}"></div>
-            <div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container " data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}'>
+            <div class="wrap-show-advance-info-box style-1 has-countdown">
+                <h3 class="title-box">PROMOCIONES</h3>
+                <div class="wrap-countdown mercado-countdown" data-expire="{{Carbon\Carbon::parse($sale->sale_date)->format('Y/m/d h:m:s') }}"></div>
+                <div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container " data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}'>
 
-                @foreach ($sproducts as $sproduct)
-                <div class="product product-style-2 equal-elem ">
-                    <div class="product-thumnail">
-                        <a href="{{route('product.details', ['slug'=>$sproduct->slug])}}" title="$sproduct->name">
-                            <figure><img src="{{ asset('assets/images/products')}}/{{$sproduct->image}}" width="800" height="800" alt="{{$sproduct->name}}"></figure>
-                        </a>
-                        <div class="group-flash">
-                            <span class="flash-item sale-label">oferta</span>
+                    @foreach ($sproducts as $sproduct)
+                    <div class="product product-style-2 equal-elem ">
+                        <div class="product-thumnail">
+                            <a href="{{route('product.details', ['slug'=>$sproduct->slug])}}" title="$sproduct->name">
+                                <figure><img src="{{ asset('assets/images/products')}}/{{$sproduct->image}}" width="800" height="800" alt="{{$sproduct->name}}"></figure>
+                            </a>
+                            <div class="group-flash">
+                                <span class="flash-item sale-label">oferta</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <a href="{{route('product.details', ['slug'=>$sproduct->slug])}}" class="product-name"><span>{{$sproduct->name}}</span></a>
+                            <div class="wrap-price"><ins><p class="product-price">S/.{{$sproduct->sale_price}}</p></ins> <del><p class="product-price">S/.{{$sproduct->regular_price}}</p></del></div>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <a href="{{route('product.details', ['slug'=>$sproduct->slug])}}" class="product-name"><span>{{$sproduct->name}}</span></a>
-                        <div class="wrap-price"><ins><p class="product-price">S/.{{$sproduct->sale_price}}</p></ins> <del><p class="product-price">S/.{{$sproduct->regular_price}}</p></del></div>
-                    </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
-        </div>
-        @endif-->
+        @endif
 
 
         <!--Product Categories-->
-
+        
         <div class="wrap-show-advance-info-box style-1">
-            <h3 class="title-box">Product Categories</h3>
+            <h3 class="title-box">Categoria Top</h3>
             <div class="wrap-top-banner">
                 <a href="#" class="link-banner banner-effect-2">
                     <figure><img src="{{ asset('assets/images/fashion-accesories-banner.jpg') }}" width="1170" height="240" alt=""></figure>
@@ -72,7 +72,7 @@
                         <div class="tab-content-item {{$key==0 ? 'active':''}}" id="#category_{{$category->id}}">
                             <div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
                                 @php 
-                                    $c_products = DB::table('products')->where('category_id', $category->id)->get()
+                                    $c_products = DB::table('products')->where('category_id', $category->id)->get()->take($no_of_products);
                                 @endphp
                                     @foreach ($c_products as $c_product)
                                         <div class="product product-style-2 equal-elem ">

@@ -1,7 +1,6 @@
 <main id="main" class="main-site left-sidebar">
 
     <div class="container">
-        <h1>Formulario de Contatos</h1>
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="#" class="link">Inicio</a></li>
@@ -46,21 +45,21 @@
                                         data-phone="088-465 9965 02"
                                         data-email="kutethemes@gmail.com"
                                         data-address="Z115 TP. Thai Nguyen"
-                                        data-longitude="-71.535"
-                                        data-latitude="-16.39889"
+                                        data-longitude="-71.5678353"
+                                        data-latitude="-16.3905543"
                                         data-pin-icon=""
                                         data-zoom="16"
                                         data-map-type="ROADMAP"
                                         data-map-height="263">
                                 </div>
                             </div>
-                            <h2 class="box-title">Detalles de Contacto</h2>
+                            <h2 class="box-title">DETALLES DE CONTACTO</h2>
                             <div class="wrap-icon-box">
 
                                 <div class="icon-box-item">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                     <div class="right-info">
-                                        <b>Correo</b>
+                                        <b>CORREO</b>
                                         <p>Support@wao.pe</p>
                                     </div>
                                 </div>
@@ -68,7 +67,7 @@
                                 <div class="icon-box-item">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                     <div class="right-info">
-                                        <b>Numero de Celular</b>
+                                        <b>NÚMERO DE CELULAR</b>
                                         <p>+5199999999</p>
                                     </div>
                                 </div>
@@ -76,8 +75,8 @@
                                 <div class="icon-box-item">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <div class="right-info">
-                                        <b>Ubicación</b>
-                                        <p>Av los incas<br />Los angeles, Arequipa</p>
+                                        <b>UBICACIÓN</b>
+                                        <p>MZA. B LOTE. 28 URBASVEA - AREQUIPA / AREQUIPA / AREQUIPA</p>
                                     </div>
                                 </div>
 

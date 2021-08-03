@@ -58,30 +58,6 @@
 						</div>
 						 <div class="topbar-menu right-menu">
 							<ul>
-								<!-- <li class="menu-item lang-menu menu-item-has-children parent">
-									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="submenu lang" >
-										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
-									</ul>
-								</li> -->
-								<!-- <li class="menu-item menu-item-has-children parent" >
-									<a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="submenu curency" >
-										<li class="menu-item" >
-											<a title="Pound (GBP)" href="#">Pound (GBP)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Euro (EUR)" href="#">Euro (EUR)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Dollar (USD)" href="#">Dollar (USD)</a>
-										</li>
-									</ul>
-								</li> -->
-
 								@if(Route::has('login'))
 									@auth
 										@if(Auth::user()->utype == 'ADM')
@@ -249,37 +225,38 @@
 						<li class="fc-info-item">
 							<i class="fa fa-shield" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Prendas de Calidad</h4>
-								<p class="fc-desc">Free On Oder Over $99</p>
+								<h3 class="fc-name">Prendas de Calidad</h3>
+								<p class="fc-desc">Con Fibra 100% Alpaca</p>
 							</div>
 
 						</li>
 						<li class="fc-info-item">
 							<i class="fa fa-recycle" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Garantia</h4>
-								<p class="fc-desc">30 Days Money Back</p>
+								<h3 class="fc-name">Garantia</h3>
+								<p class="fc-desc">30 días de devolución de dinero</p>
 							</div>
 
 						</li>
 						<li class="fc-info-item">
 							<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Facilidad</h4>
-								<p class="fc-desc">Safe your online payment</p>
+								<h3 class="fc-name">Facilidad</h3>
+								<p class="fc-desc">Siempre Pensando en Ustedes</p>
 							</div>
 
 						</li>
 						<li class="fc-info-item">
 							<i class="fa fa-info-circle" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Soporte Personalido</h4>
-								<p class="fc-desc">We Have Support 24/7</p>
+								<h3 class="fc-name">Soporte Personalido</h3>
+								<p class="fc-desc">Nosotros tenemos soporte 24/7</p>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
+
 			<!--End function info-->
 
 			<div class="main-footer-content">
@@ -325,20 +302,6 @@
 									</div>
 								</div>
 							</div>
-<!-- 
-							<div class="wrap-footer-item footer-item-second">
-								<h3 class="item-header">Suscribete para ofertas</h3>
-								<div class="item-content">
-									
-									<div class="wrap-newletter-footer">
-										<form action="#" class="frm-newletter" id="frm-newletter">
-											<input type="email" class="input-email" name="email" value="" placeholder="Enter your email address">
-											<button class="btn-submit">Subscribe</button>
-										</form>
-									</div>
-								</div>
-							</div> -->
-
 						</div>
 
 						<div class="col-md-2">
@@ -358,93 +321,11 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- <div class="row">
-
-						<div class="col-lg-4 col-sm-4 col-md- col-xs-6">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">We Using Safe Payments:</h3>
-								<div class="item-content">
-									<div class="wrap-list-item wrap-gallery">
-										<img src="assets/images/payment.png" style="max-width: 260px;">
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-6 col-xs-6">
-							<div class="wrap-footer-item">
-								
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
-							<div class="wrap-footer-item">
-							<h3 class="item-header">Social network</h3>
-								<div class="item-content">
-									<div class="wrap-list-item social-network">
-										<ul>
-											<li><a href="#" class="link-to-item" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div> -->
 				</div>
-				<br>
-				<!-- <div class="wrap-back-link">
-					<div class="container">
-						<div class="back-link-box">
-							<h3 class="backlink-title">Quick Links</h3>
-							<div class="back-link-row">
-								<ul class="list-back-link" >
-									<li><span class="row-title">Mobiles:</span></li>
-									<li><a href="#" class="redirect-back-link" title="mobile">Mobiles</a></li>
-									<li><a href="#" class="redirect-back-link" title="yphones">YPhones</a></li>
-									<li><a href="#" class="redirect-back-link" title="Gianee Mobiles GL">Gianee Mobiles GL</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Karbonn">Mobiles Karbonn</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Viva">Mobiles Viva</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Intex">Mobiles Intex</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Micrumex">Mobiles Micrumex</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Bsus">Mobiles Bsus</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Samsyng">Mobiles Samsyng</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Lenova">Mobiles Lenova</a></li>
-								</ul>
-
-								<ul class="list-back-link" >
-									<li><span class="row-title">Tablets:</span></li>
-									<li><a href="#" class="redirect-back-link" title="Plesc YPads">Plesc YPads</a></li>
-									<li><a href="#" class="redirect-back-link" title="Samsyng Tablets" >Samsyng Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Qindows Tablets" >Qindows Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Calling Tablets" >Calling Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Micrumex Tablets" >Micrumex Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Lenova Tablets Bsus" >Lenova Tablets Bsus</a></li>
-									<li><a href="#" class="redirect-back-link" title="Tablets iBall" >Tablets iBall</a></li>
-									<li><a href="#" class="redirect-back-link" title="Tablets Swipe" >Tablets Swipe</a></li>
-									<li><a href="#" class="redirect-back-link" title="Tablets TVs, Audio" >Tablets TVs, Audio</a></li>
-								</ul>
-
-								<ul class="list-back-link" >
-									<li><span class="row-title">Fashion:</span></li>
-									<li><a href="#" class="redirect-back-link" title="Sarees Silk" >Sarees Silk</a></li>
-									<li><a href="#" class="redirect-back-link" title="sarees Salwar" >sarees Salwar</a></li>
-									<li><a href="#" class="redirect-back-link" title="Suits Lehengas" >Suits Lehengas</a></li>
-									<li><a href="#" class="redirect-back-link" title="Biba Jewellery" >Biba Jewellery</a></li>
-									<li><a href="#" class="redirect-back-link" title="Rings Earrings" >Rings Earrings</a></li>
-									<li><a href="#" class="redirect-back-link" title="Diamond Rings" >Diamond Rings</a></li>
-									<li><a href="#" class="redirect-back-link" title="Loose Diamond Shoes" >Loose Diamond Shoes</a></li>
-									<li><a href="#" class="redirect-back-link" title="BootsMen Watches" >BootsMen Watches</a></li>
-									<li><a href="#" class="redirect-back-link" title="Women Watches" >Women Watches</a></li>
-								</ul>
-
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
+
+			<br>
+
 
 			<!-- Whatsapp plugin de chat Code -->
 			<a class="appWhatsapp" target="_blank" href="https://api.whatsApp.com/send?phone=+51900989543&text=hola!&nbsp;con&nbsp;el&nbsp;encargado&nbsp;de&nbsp;WAW?">
@@ -479,60 +360,6 @@
 			}(document, 'script', 'facebook-jssdk'));
 			</script>
 
-
-		<style>
-			.contenedor figure{
-				margin:0;
-				padding:0;
-				max-width:100%;
-				max-height:120px;
-				position: relative;
-				overflow: hidden;
-			}
-			.contenedor figure img{
-				width: 100%;
-				height: 100%;
-				transition: all 500ms ease-out;
-			}
-			.contenedor figure .capa{
-				position: absolute;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(255,255,255,0.6);
-				transition: all 500ms ease-out;
-				text-align:center;
-				vertical-align: middle;
-				justify-content:center;
-			}
-			.contenedor figure:hover > img{
-				transform:scale(1.2);
-			}
-			.contenedor figure .capa h3{
-				color:white;
-				margin-bottom: 5px;
-				transition: all 500ms ease-out;
-				margin-top:30px;
-				text-align:center;
-				vertical-align: middle;
-				justify-content:center;
-				font-size: 18px;
-				color:black;
-				font-weight:bold;
-				vertical-align:middle;
-			}
-			.contenedor figure .capa a img{
-				vertical-align: middle;
-				width:95px;
-				height:40px;
-				text-align:center;
-				vertical-align: middle;
-				justify-content:center;
-				cursor:pointer;
-			}
-
-		</style>
-
 			<div class="row" style="align-items:center;">
 				<div class="col-md-12 contenedor">
 					<figure>
@@ -556,9 +383,7 @@
 						<div class="wrap-nav horizontal-nav">
 							<ul>
 								<!-- <li class="menu-item"><a href="about-us.html" class="link-term">Acerca de</a></li>								 -->
-								<li class="menu-item"><a href="/contact" class="link-term">Contactanos</a></li>
-								<li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms Comerciales</a></li>
-								<li class="menu-item"><a href="return-policy.html" class="link-term">Servicio al Cliente</a></li>								
+								<li class="menu-item"><a href="/contact" class="link-term">Contactanos</a></li>								
 							</ul>
 						</div>
 					</div>
@@ -583,6 +408,7 @@
 	<!-- <script type="text/javascript" src="{{ asset('assets/js/popper.min.js') }}"></script> -->
 	<script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('assets/js/mdb.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('assets/js/mdb.min.js.map') }}"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
