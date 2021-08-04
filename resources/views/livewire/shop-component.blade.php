@@ -71,7 +71,6 @@
 						</li>
 						@endforeach
 					</ul>
-
 				</div>
 				<!-- <div class="wrap-pagination-informatios">
 					{{$products->links()}}
