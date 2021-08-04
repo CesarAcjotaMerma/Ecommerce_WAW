@@ -55,11 +55,11 @@
                                     <td>{{$slider->subtitle}}</td>
                                     <td>{{$slider->price}}</td>
                                     <td>{{$slider->link}}</td>
-                                    <td>{{$slider->status == 1 ? 'Active':'Inactive'}}</td>
+                                    <td>{{$slider->status == 1 ? 'Activo':'Inactivo'}}</td>
                                     <td>{{$slider->created_at}}</td>
                                     <td>
                                         <a href="{{route('admin.edithomeslider',['slide_id'=>$slider->id])}}"><i class="fa fa-edit fa-2x"></i></a>
-                                        <a style="margin-left:10px;" href="#" wire:click.prevent="deleteSlide({{$slider->id}})"><i class="fa fa-trash fa-2x text-danger"></i></a>
+                                        <a style="margin-left:10px;" href="#" onclick="confirm('Estas seguro que quiere eliminar el Slider?') || event.stopImmediatePropagation()" wire:click.prevent="deleteSlide({{$slider->id}})"><i class="fa fa-trash fa-2x text-danger"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -26,13 +26,29 @@
     
     <hr/>
 
+    <style>
+        model-viewer {
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+
     <div class="row" style="align-items:center;">
         <div class="col-md-6 container2">
             <h4>Las alpacas son un factor económico importante para los pastores del altiplano andino peruano. Muchas familias se ganan la vida con la cría de alpacas y la extracción y procesamiento de la lujosa y única lana de alpaca.</h4>
         </div>
         <div class="col-md-6">
             <figure>
-                    <img src="https://images.pexels.com/photos/5383032/pexels-photo-5383032.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid" height="80" alt="la-alpaca"/>
+                <model-viewer src="{{asset('assets/images/alpaca/ModeloAlpaca.glb')}}" camera-controls auto-rotate exposure="0.7" shadow-intensity="4.7" shadow-softness="0.16">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    <button slot="ar-button" id="ar-button">
+                        View in your space
+                    </button>
+                </model-viewer>
+
+                    <!-- <img src="https://images.pexels.com/photos/5383032/pexels-photo-5383032.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid" height="80" alt="la-alpaca"/> -->
                     <div class="capa">
                     </div>
             </figure>

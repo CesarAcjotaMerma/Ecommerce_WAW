@@ -33,6 +33,19 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label class="col-md-4 control-label">Talla</label>
+                                    <div class="col-md-4">
+                                        <select class="form-control" wire:model="size">
+                                            <option value="x-small">X-S</option>
+                                            <option value="small">S</option>
+                                            <option value="medium">M</option>
+                                            <option value="large">L</option>
+                                            <option value="x-large">X-L</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="col-md-4 control-label">Descripcion Corta</label>
                                     <div class="col-md-4">
                                         <textarea class="form-control" placeholder="descripcion corta" wire:model="short_description"></textarea>

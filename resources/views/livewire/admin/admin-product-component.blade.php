@@ -22,7 +22,7 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-6">
-                            Agregar nuevo producto
+                            Lista de todo los Productos
                         </div>
                         <div class="col-md-6">
                             <a href="{{route('admin.addproduct')}}" class="btn btn-success pull-right">Agregar</a>
@@ -39,12 +39,13 @@
                                 <th>ID</th>
                                 <th>Imagen</th>
                                 <th>Nombre</th>
+                                <th>Talla</th>
+                                <th>Codigo(SKU)</th>
                                 <th>Stock</th>
                                 <th>Precio</th>
                                 <th>Precio de Venta</th>
                                 <th>Categoria</th>
                                 <th>Fecha de Creacion</th>
-                                <th>Fecha de Actualizacion</th>
                                 <th>Accion</th>
                             </tr>
                         </thead>
@@ -54,12 +55,13 @@
                                 <td>{{$product->id}}</td>
                                 <td><img src="{{asset('assets/images/products')}}/{{$product->image}}" style="width:60px"/></td>
                                 <td>{{$product->name}}</td>
+                                <td>{{$product->size}}</td>
+                                <td>{{$product->SKU}}</td>
                                 <td>{{$product->stock_status}}</td>
                                 <td>{{$product->regular_price}}</td>
                                 <td>{{$product->sale_price}}</td>
                                 <td>{{$product->category->name}}</td>
                                 <td>{{$product->created_at}}</td>
-                                <td>{{$product->updated_at}}</td>
                                 <td>
                                     <a href="{{route('admin.editproduct', ['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x text-info"></i></a>
                                     <a style="margin-left:10px;" href="#" onclick="confirm('Estas seguro que quiere eliminar esta categoria?') || event.stopImmediatePropagation()" wire:click.prevent="deleteProduct({{$product->id}})"><i class="fa fa-trash fa-2x text-danger"></i></a>

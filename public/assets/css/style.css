@@ -209,29 +209,31 @@ button:hover, button:focus, button:visited, button:active{
     align-content: center;
     padding: auto;
     margin: auto;
-    background:rgba(0, 0, 0, 0.797);
+    background:rgba(0, 0, 0, 0.750);
     transform: translate(-50%,-50%);
     z-index: 1000;
     justify-content: center;
     align-items:center;
+    vertical-align: middle;
     display: flex;
 }
 
 .contentBox{
     position: relative;
-    width: 700px;
-    height: 400px;
+    width: 750px;
+    height: 450px;
     background: rgb(255, 255, 255);
     border-radius: 2px;
     display: flex;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    vertical-align: middle;
 
 }
 
 .contentBox .imgBx{
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -255,23 +257,32 @@ button:hover, button:focus, button:visited, button:active{
 
 .contentBox .modelContent{
     position: relative;
-    width: 300px;
+    width: 350px;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
 }
 
 .contentBox .modelContent h3{
     color: #000;
-    line-height: 1em;
-    font-weight: 300;
+    line-height: 2em;
+    font-weight: 700;
     font-size: 2em;
 }
 
+.contentBox .modelContent h3 span{
+    color: var(--pcolor);
+    line-height: 1em;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
 .contentBox .modelContent h2{
-    font-size: 4em;
-    color: #ff4d54;
+    font-size: 35px;
+    color: #000000;
+    font-weight: bold;
     line-height: 1em;
 }
 
@@ -296,14 +307,9 @@ button:hover, button:focus, button:visited, button:active{
     text-decoration: none;
 }
 
-.contentBox .modelContent h2 span{
-    color:#000;
-    font-size: 0.75em;
-    text-transform: uppercase;
-}
-
 .contentBox .modelContent p{
     font-weight: 300;
+    font-size: 18px;
 }
 
 .contentBox .modelContent a{
@@ -326,10 +332,10 @@ button:hover, button:focus, button:visited, button:active{
     z-index: 10;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 700px) {
 
     .contentBox{
-        width: 90%;
+        width: 95%;
         height: 50%;
         position: relative;
         background: rgb(255, 255, 255);
@@ -344,7 +350,6 @@ button:hover, button:focus, button:visited, button:active{
         width: 100px;
         height: 100px;
         background: rgb(255, 255, 255);
-        border-radius: 50%;
     }
     .contentBox .imgBx{
         position: relative;
@@ -353,6 +358,7 @@ button:hover, button:focus, button:visited, button:active{
         display: flex;
         justify-content: center;
         align-items:center;
+        margin-right: 10px;
     }
     .contentBox .imgBx img{
         position: relative;
@@ -361,39 +367,39 @@ button:hover, button:focus, button:visited, button:active{
     }
     .contentBox .modelContent{
         position: relative;
-        width: 100px;
+        width: 300px;
         height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    .contentBox .modelContent h3{
+    .contentBox .modelContent h2{
         color: #000;
         line-height: 1em;
-        font-weight: 100;
-        font-size: 1em;
+        font-weight: bold;
+        font-size: 1.35em;
     }
     
-    .contentBox .modelContent h2{
-        font-size: 2em;
-        color: #ff4d54;
+    .contentBox .modelContent h3{
+        font-size: 1.3em;
+        color: #000;
         line-height: 1em;
     }
     
     .contentBox .modelContent h2 span{
         color:#000;
-        font-size: 0.75em;
+        font-size: 0.45em;
         text-transform: uppercase;
     }
     
     .contentBox .modelContent p{
-        font-weight: 200;
+        font-size: 13px;
+        padding-right: 5px;
     }
     
     .contentBox .modelContent a{
         display: inline-block;
-        padding: 5px 10px;
     }
 }
 
@@ -1272,10 +1278,9 @@ li.menu-item .nav-label.sale-label::before{
 .product .product-thumnail figure{
     display: inline-block;
     overflow: hidden;
-    max-height: 270px;
 }
 .product .product-thumnail figure img{
-    min-height: 270px;
+    max-height: 220px;
     transition: transform ease-out 0.3s 0s;
     -webkit-transition: transform ease-out 0.3s 0s;
     -moz-transition: transform ease-out 0.3s 0s;
@@ -2273,9 +2278,9 @@ li.menu-item .nav-label.sale-label::before{
     display: inline-block;
 }
 
-.product-style-2 .product-thumnail a img{
-    max-height: 350px;
-}
+/* .product-style-2 .product-thumnail a img{
+    height: 230px;
+} */
 .product-style-2 .product-thumnail .wrap-btn{
     display: inline-block;
     position: absolute;
@@ -7649,10 +7654,10 @@ svg{
 
 .product-wish{
     position:absolute;
-    top:10%;
+    top:12%;
     left: 0;
     z-index:99;
-    right: 40px;
+    right: 70px;
     text-align:right;
     padding-top:0;
 }
@@ -7863,4 +7868,73 @@ svg{
     vertical-align: middle;
     justify-content:center;
     cursor:pointer;
+}
+
+/* ZOOM DETAIL PRODUCT */
+
+.regprice{
+    font-weight: 300;
+    font-size: 13px;
+    color:white;
+    text-decoration: line-through;
+    padding-left: 10px;
+}
+.show{
+    width: 400px;
+    height: 450px;
+    z-index: 100;
+}
+
+.small-img{
+    width: 400px;
+    height: 70px;
+    margin-top: 10px;
+    position: relative;
+    left: 0;
+}
+
+.small-img .icon-left, .small-img .icon-right{
+    width: 10px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.small-img .icon-left{
+    transform: rotate(180deg);
+}
+.small-img .icon-right{
+    right: 0;
+}
+
+.small-img .icon-left:hover,
+.small-img .icon-right:hover{
+    opacity: .5;
+}
+
+.small-container{
+    width: 300px;
+    height: 70px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.small-container div{
+    width: 800%;
+    position: relative;
+}
+
+.small-container .show-small-img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+    float:left;
+}
+.small-container .show-small-img:last-of-type{
+    margin-right: 15px;
 }

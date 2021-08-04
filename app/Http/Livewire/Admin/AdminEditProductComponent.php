@@ -16,6 +16,7 @@ class AdminEditProductComponent extends Component
     public $slug;
     public $short_description;
     public $description;
+    public $size;
     public $regular_price;
     public $sale_price;
     public $SKU;
@@ -36,6 +37,7 @@ class AdminEditProductComponent extends Component
 
         $this->name = $product->name;
         $this->slug = $product->slug;
+        $this->size = $product->size;
         $this->short_description = $product->short_description;
         $this->description = $product->description;
         $this->regular_price = $product->regular_price;
@@ -60,6 +62,7 @@ class AdminEditProductComponent extends Component
         $product = Product::find($this->product_id);
         $product->name = $this->name;
         $product->slug = $this->slug;
+        $product->size = $this->size;
         $product->short_description = $this->short_description;
         $product->description = $this->description;
         $product->regular_price = $this->regular_price;

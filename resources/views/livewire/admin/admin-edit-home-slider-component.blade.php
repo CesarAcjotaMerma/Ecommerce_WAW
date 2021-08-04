@@ -71,7 +71,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Editar</button>
+                                    <button type="submit" class="btn btn-warning">Editar</button>
                                 </div>
                             </div>
                         </form>

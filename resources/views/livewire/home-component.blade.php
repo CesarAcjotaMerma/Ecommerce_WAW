@@ -1,25 +1,26 @@
 <main id="main">
 		<div class="container">
 
-			<!--MAIN SLIDE-->
-			<div class="wrap-main-slide">
-				<div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
-					@foreach($sliders as $slider)
-						<div class="item-slide">
-							<img src="{{ asset('assets/images/sliders')}}/{{ $slider->image}}" height="30" alt="" class="img-slide">
-							<div class="slide-info slide-1">
-								<h2 class="f-title"><b>{{$slider->title}}</b></h2>
-								<span class="subtitle">{{$slider->subtitle}}</span>
-								<p class="sale-info">Preciasos: <span class="price">S/.{{$slider->price}}</span></p>
-								<a href="{{$slider->link}}" class="btn-link">Ver</a>
-							</div>
+		<!--MAIN SLIDE-->
+		<div class="wrap-main-slide">
+			<div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
+				@foreach($sliders as $slider)
+					<div class="item-slide">
+						<img src="{{ asset('assets/images/sliders')}}/{{ $slider->image}}" height="30" alt="" class="img-slide">
+						<div class="slide-info slide-1">
+							<h2 class="f-title"><b>{{$slider->title}}</b></h2>
+							<span class="subtitle">{{$slider->subtitle}}</span>
+							<p class="sale-info"><b>PRENDAS HASTA : </b><span class="price">S/.{{$slider->price}}</span></p>
+							<a href="{{$slider->link}}" class="btn-link">VER</a>
 						</div>
-					@endforeach
-				</div>
+					</div>
+				@endforeach
 			</div>
+		</div>
 
-			<!-- POPUP -->
-			<div class="popup">
+
+			<!-- POPUP PRUEBA -->
+			<!-- <div class="popup">
 					<div class="contentBox">
 						<div class="close"></div>
 						<div class="imgBx">
@@ -27,35 +28,39 @@
 						</div>
 						<div class="modelContent">
 							<div>
-								<h3>OFERTAS FIESTAS PATRIAS</h3>
-								<h2>80<sup>%</sup><span> Off</span></h2>
-								<p>Tenemos los ultimos productos en ofertas gratis</p>
+								<h2>OFERTAS AGOSTO</h2>
+								<h3>A Solo : <span>S/. 50.00</span></h3>
+								<p>Tenemos las mejores ofertas para todo tipo de gustos</p>
+								<br>
 								<a type="submit" class="btn-link" href="/shop">VER</a>
 							</div>
 						</div>
 					</div>
-			</div>
+			</div> -->
 
-			<!-- <div class="popup">
+			<!-- POPUP OFICIAL -->
+
+			<div class="popup">
 				@foreach($popups as $popup)
 					<div class="contentBox">
 						<div class="close"></div>
 						<div class="imgBx">
-							<img src="{{ asset('assets/images/sliders') }}/{{$popup->image}}" alt="">
+							<img src="{{ asset('assets/images/popups') }}/{{$popup->image}}" alt="">
 						</div>
 						<div class="modelContent">
 							<div>
-								<h3>{{$popup->title}}</h3>
-								<h2>80<sup>%</sup><span> Off</span></h2>
+								<h2>{{$popup->title}}</h2>
+								<h3>A Solo : <span>S/. {{$popup->price}}</span></h3>
 								<p>{{$popup->subtitle}}</p>
-								<a type="submit" class="btn btn-danger" href="{{$popup->link}}">VER</a>
+								<br>
+								<a type="submit" class="btn-link" href="{{$popup->link}}">VER</a>
 							</div>
 						</div>
 					</div>
 				@endforeach
-			</div> -->
+			</div>
 
-			<!-- Model automatico -->
+			<!-- POPUP Automatico -->
 
 			<script>
 				const popup = document.querySelector('.popup');

@@ -84,6 +84,9 @@
 														<a class="dropdown-item" title="Manage Home Slider" href="{{route('admin.homeslider')}}">Administrar Sliders</a>
 													</li>
 													<li class="menu-item">
+														<a class="dropdown-item" title="Manage Home Popup" href="{{route('admin.homepopup')}}">Administrar Popup</a>
+													</li>
+													<li class="menu-item">
 														<a class="dropdown-item" title="Manage Home Categorias" href="{{route('admin.homecategories')}}">Administrar Categorias en Promociones</a>
 													</li>
 													<li class="menu-item">
@@ -296,8 +299,8 @@
 								<div class="item-content">
 									<div class="wrap-vertical-nav">
 										<ul>
-											<li class="menu-item"><a href="#" class="link-term">Terminos y Condiciones</a></li>
-											<li class="menu-item"><a href="#" class="link-term">Envios</a></li>
+											<li class="menu-item"><a href="{{ route('terminos.condiciones') }}" class="link-term">Terminos y Condiciones</a></li>
+											<li class="menu-item"><a href="/ofertas" class="link-term">Envios</a></li>
 										</ul>
 									</div>
 								</div>

@@ -1,75 +1,4 @@
-
 <main id="main" class="main-site">
-    <style>
-        .regprice{
-            font-weight: 300;
-            font-size: 13px;
-            color:white;
-            text-decoration: line-through;
-            padding-left: 10px;
-        }
-        .show{
-            max-width: 350px;
-            height: 450px;
-            max-height: 500px;
-            z-index:100;
-        }
-
-        .small-img{
-            width: 350px;
-            height: 70px;
-            margin-top: 10px;
-            position: relative;
-            left: 0;
-        }
-
-        .small-img .icon-left, .small-img .icon-right{
-            width: 10px;
-            height: 14px;
-            cursor: pointer;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto 0;
-        }
-        .small-img .icon-left{
-            transform: rotate(180deg)
-        }
-        .small-img .icon-right{
-            right: 0;
-        }
-
-        .small-img .icon-left:hover,
-        .small-img .icon-right:hover{
-            opacity: .5;
-        }
-
-        .small-container{
-            width: 310px;
-            height: 70px;
-            overflow: hidden;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-        }
-        .small-container div{
-            width: 800%;
-            position: relative;
-        }
-
-        .small-container .show-small-img{
-            width: 70px;
-            height: 70px;
-            margin-right: 30px;
-            cursor: pointer;
-            float:left;
-        }
-        .small-container .show-small-img:last-of-type{
-            margin-right: 15px;
-        }
-    </style>
-
     <div class="container">
         <div class="wrap-breadcrumb">
             <ul>
@@ -90,20 +19,19 @@
                         @endphp
                     
                         <div class="small-img">
-                            <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-left" alt="" id="prev-img">
+                            <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-left" alt="{{$product->name}}" id="prev-img">
                             <div class="small-container">
-                            @foreach($images as $image)
-                                @if($image)
-                                    <div id="small-img-roll">
-                                        <img src="{{ asset('assets/images/products') }}/{{$image}}" class="show-small-img" alt="{{$product->name}}"/>
-                                    </div>
-                                @endif
-                            @endforeach
+                                <div id="small-img-roll">
+                                    @foreach($images as $image)
+                                        @if($image)
+                                            <img src="{{ asset('assets/images/products') }}/{{$image}}" class="show-small-img" alt="{{$product->name}}"/>
+                                        @endif
+                                    @endforeach
+                                </div>
                             </div>
-                            <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-right" alt="" id="next-img">
+                            <img src="{{ asset('assets/images/iconos/iconext.png') }}" class="icon-right" alt="{{$product->name}}" id="next-img">
                         </div>
                     </div>
-
 
                     <div class="detail-info">
                         <h2 class="product-name">{{$product->name}}</h2>
@@ -122,13 +50,21 @@
                             <p class="availability">Disponibilidad: <b>{{$product->stock_status}}</b></p>
                             <p class="availability">Cantidad Disponible: <b>{{$product->quantity}}</b></p>
                         </div>
-                        <!-- <div class="widget mercado-widget filter-widget">
+                        <!-- <div class="widget mercado-widget stock-info in-stock filter-widget">
                             <div class="widget-content">
+                            <p>Talla Disponible: </p>
                                 <ul class="list-style inline-round ">
-                                    <li class="list-item">Tamaño: <a class="filter-link active" href="#">s</a></li>
-                                    <li class="list-item"><a class="filter-link " href="#">M</a></li>
-                                    <li class="list-item"><a class="filter-link " href="#">l</a></li>
-                                    <li class="list-item"><a class="filter-link " href="#">xl</a></li>
+                                    @if($product->size == 'x-small')
+                                        <li class="list-item"><a class="filter-link" href="#">X-S</a></li>
+                                    @elseif($product->size == 'small')
+                                        <li class="list-item"><a class="filter-link " href="#">S</a></li>
+                                    @elseif($product->size == 'medium')
+                                        <li class="list-item"><a class="filter-link " href="#">M</a></li>
+                                    @elseif($product->size == 'large')
+                                        <li class="list-item"><a class="filter-link " href="#">l</a></li>
+                                    @elseif($product->size == 'x-large')
+                                        <li class="list-item"><a class="filter-link " href="#">Xl</a></li>
+                                    @endif
                                 </ul>
                             </div>
                         </div> -->
@@ -226,12 +162,6 @@
                                     <a href="{{route('product.details', ['slug'=>$r_product->slug])}}" title="{{$r_product->name}}">
                                         <img src="{{ asset('assets/images/products') }}/{{$r_product->image}}" width="214" height="214" alt="{{$r_product->name}}">
                                     </a>
-                                    <div class="group-flash">
-                                        <span class="flash-item new-label">new</span>
-                                    </div>
-                                    <div class="wrap-btn">
-                                        <a href="#" class="function-link">quick view</a>
-                                    </div>
                                 </div>
                                 <div class="product-info">
                                     <a href="{{route('product.details', ['slug'=>$r_product->slug])}}" class="product-name"><span>{{$r_product->name}}</span></a>

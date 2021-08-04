@@ -21,14 +21,27 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label">Nombre del Producto</label>
                                     <div class="col-md-4">
-                                        <input type="text" placeholder="product name" class="form-control input-md" wire:model="name" wire:keyup="generateSlug"/>
+                                        <input type="text" placeholder="nombre del producto" class="form-control input-md" wire:model="name" wire:keyup="generateSlug"/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-md-4 control-label">Slug de Producto</label>
                                     <div class="col-md-4">
-                                        <input type="text" placeholder="product slug" class="form-control input-md" wire:model="slug"/>
+                                        <input type="text" placeholder="slug del producto" class="form-control input-md" wire:model="slug"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Talla</label>
+                                    <div class="col-md-4">
+                                        <select class="form-control" wire:model="size">
+                                            <option value="x-small">X-S</option>
+                                            <option value="small">S</option>
+                                            <option value="medium">M</option>
+                                            <option value="large">L</option>
+                                            <option value="x-large">X-L</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -49,14 +62,14 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label">Precio Regular</label>
                                     <div class="col-md-4">
-                                        <input type="text" placeholder="Regular Price" class="form-control input-md" wire:model="regular_price"/>
+                                        <input type="text" placeholder="precio regular" class="form-control input-md" wire:model="regular_price"/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label">Precio de Venta</label>
+                                    <label class="col-md-4 control-label">Precio de Oferta</label>
                                     <div class="col-md-4">
-                                        <input type="text" placeholder="Sale Price" class="form-control input-md" wire:model="sale_price"/>
+                                        <input type="text" placeholder="precio oferta" class="form-control input-md" wire:model="sale_price"/>
                                     </div>
                                 </div>
 
@@ -90,7 +103,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label">Cantidad</label>
                                     <div class="col-md-4">
-                                        <input type="text" placeholder="Quantity" class="form-control input-md" wire:model="quantity"/>
+                                        <input type="text" placeholder="cantidad" class="form-control input-md" wire:model="quantity"/>
                                     </div>
                                 </div>
 

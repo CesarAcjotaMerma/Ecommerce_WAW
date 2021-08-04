@@ -20,6 +20,7 @@ use App\Http\Livewire\SoftComponent;
 use App\Http\Livewire\AlpacaDoradaComponent;
 use App\Http\Livewire\AlpacaComponent;
 use App\Http\Livewire\DetrasMarcaComponent;
+use App\Http\Livewire\TermsConditionsComponent;
 
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
@@ -33,6 +34,10 @@ use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminAddHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
+
+use App\Http\Livewire\Admin\AdminHomePopupComponent;
+use App\Http\Livewire\Admin\AdminAddHomePopupComponent;
+use App\Http\Livewire\Admin\AdminEditHomePopupComponent;
 
 use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 
@@ -49,7 +54,7 @@ Route::get('/shop', ShopComponent::class);
 
 Route::get('/promociones', PromotionsComponent::class);
 
-// Route::get('/ofertas', OfertasComponent::class);
+Route::get('/ofertas', OfertasComponent::class);
 
 Route::get('/cart', CartComponent::class)->name('product.cart');
 
@@ -75,6 +80,8 @@ Route::get('/la-alpaca', AlpacaComponent::class);
 Route::get('/detras-de-la-marca', DetrasMarcaComponent::class);
 
 Route::get('/contact', ContactComponent::class);
+
+Route::get('/terminos-y-condiciones', TermsConditionsComponent::class)->name('terminos.condiciones');
 
 
 
@@ -106,6 +113,11 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::get('/admin/slider', AdminHomeSliderComponent::class)->name('admin.homeslider');
     Route::get('/admin/slider/add', AdminAddHomeSliderComponent::class)->name('admin.addhomeslider');
     Route::get('/admin/slider/edit/{slide_id}', AdminEditHomeSliderComponent::class)->name('admin.edithomeslider');
+
+    //PopupHome
+    Route::get('/admin/popup', AdminHomePopupComponent::class)->name('admin.homepopup');
+    Route::get('/admin/popup/add', AdminAddHomePopupComponent::class)->name('admin.addhomepopup');
+    Route::get('/admin/popup/edit/{popup_id}', AdminEditHomePopupComponent::class)->name('admin.edithomepopup');
 
     Route::get('/admin/home-categories', AdminHomeCategoryComponent::class)->name('admin.homecategories');
 

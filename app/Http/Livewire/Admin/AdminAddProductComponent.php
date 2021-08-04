@@ -17,6 +17,7 @@ class AdminAddProductComponent extends Component
     public $slug;
     public $short_description;
     public $description;
+    public $size;
     public $regular_price;
     public $sale_price;
     public $SKU;
@@ -30,6 +31,7 @@ class AdminAddProductComponent extends Component
     public function mount()
     {
         $this->stock_status = 'disponible';
+        $this->size = 'small';
         $this->featured = 0;
     }
 
@@ -42,6 +44,7 @@ class AdminAddProductComponent extends Component
         $product = new Product();
         $product->name = $this->name;
         $product->slug = $this->slug;
+        $product->size = $this->size;
         $product->short_description = $this->short_description;
         $product->description = $this->description;
         $product->regular_price = $this->regular_price;

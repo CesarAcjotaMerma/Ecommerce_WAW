@@ -15,8 +15,8 @@
                         <div class="slide-info slide-1">
                             <h2 class="f-title"><b>{{$slider->title}}</b></h2>
                             <span class="subtitle">{{$slider->subtitle}}</span>
-                            <p class="sale-info">A SOLO: <b class="price">S/.{{$slider->price}}</b></p>
-                            <a href="{{$slider->link}}" class="btn-link">Ver</a>
+                            <p class="sale-info"><b>A SOLO : </b><b class="price">S/.{{$slider->price}}</b></p>
+                            <a href="{{$slider->link}}" class="btn-link">VER</a>
                         </div>
                     </div>
                 @endforeach
@@ -55,9 +55,9 @@
         <div class="wrap-show-advance-info-box style-1">
             <h3 class="title-box">Categoria Top</h3>
             <div class="wrap-top-banner">
-                <a href="#" class="link-banner banner-effect-2">
+                <!-- <a href="#" class="link-banner banner-effect-2">
                     <figure><img src="{{ asset('assets/images/fashion-accesories-banner.jpg') }}" width="1170" height="240" alt=""></figure>
-                </a>
+                </a> -->
             </div>
             <div class="wrap-products">
                 <div class="wrap-product-tab tab-style-1">

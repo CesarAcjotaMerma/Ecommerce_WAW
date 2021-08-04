@@ -21,14 +21,14 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label">Nombre Categoria</label>
                                     <div class="col-md-4">
-                                        <input type="text" placeholder="category name" class="form-control input-md" wire:model="name" wire:keyup="generateslug"/>
+                                        <input type="text" placeholder="nombre de la categoria" class="form-control input-md" wire:model="name" wire:keyup="generateslug"/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-md-4 control-label">Slug de Categoria</label>
                                     <div class="col-md-4">
-                                        <input type="text" placeholder="category slug" class="form-control input-md"  wire:model="slug"/>
+                                        <input type="text" placeholder="slug de la categoria" class="form-control input-md"  wire:model="slug"/>
                                     </div>
                                 </div>
 
