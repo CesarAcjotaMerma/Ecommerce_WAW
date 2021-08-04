@@ -2,6 +2,13 @@
     
     <div class="container">
 
+    <style>
+        model-viewer {
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+
         <div class="wrap-breadcrumb">
                     <ul>
                         <li class="item-link"><a href="/" class="link">Inicio</a></li>
@@ -10,7 +17,7 @@
         </div>
 
         <div class="model-3D" style="width:200px">
-            <model-viewer src="{{asset('assets/images/prueba/Astronaut.glb') }}" width="400" alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
+            <model-viewer src="{{asset('assets/images/prueba/Astronaut.glb') }}" alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
         </div>
 
         <model-viewer src="{{asset('assets/images/prueba/Zapatilla.glb') }}" camera-controls auto-rotate>
@@ -21,9 +28,6 @@
             <button slot="ar-button" id="ar-button">
                 View in your space
             </button>
-            <div id="ar-prompt">
-                <img src="{{asset('assets/images/prueba/Zapatilla.glb') }}">
-            </div>
         </model-viewer>
 
 
