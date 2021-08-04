@@ -11,7 +11,7 @@
             <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
                 <div class="wrap-product-detail">
                     <div class="detail-media">
-                        <div class="show" href="{{ asset('assets/images/products') }}/{{$product->image}}">
+                        <div class="show" href="{{ asset('assets/images/products') }}/{{$product->image}}" wire:ignore>
                             <img src="{{ asset('assets/images/products') }}/{{$product->image}}" id="show-img">
                         </div>
                         @php
