@@ -20,7 +20,7 @@
 
 
 			<!-- POPUP PRUEBA -->
-			<!-- <div class="popup">
+			<div class="popup">
 					<div class="contentBox">
 						<div class="close"></div>
 						<div class="imgBx">
@@ -36,29 +36,9 @@
 							</div>
 						</div>
 					</div>
-			</div> -->
+			</div>
 
 			<!-- POPUP OFICIAL -->
-
-			<div class="popup">
-				@foreach($popups as $popup)
-					<div class="contentBox">
-						<div class="close"></div>
-						<div class="imgBx">
-							<img src="{{ asset('assets/images/popups') }}/{{$popup->image}}" alt="">
-						</div>
-						<div class="modelContent">
-							<div>
-								<h2>{{$popup->title}}</h2>
-								<h3>A Solo : <span>S/. {{$popup->price}}</span></h3>
-								<p>{{$popup->subtitle}}</p>
-								<br>
-								<a type="submit" class="btn-link" href="{{$popup->link}}">VER</a>
-							</div>
-						</div>
-					</div>
-				@endforeach
-			</div>
 
 			<!-- POPUP Automatico -->
 
